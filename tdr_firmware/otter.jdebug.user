@@ -1,0 +1,16 @@
+
+OpenDocument="stm32g4xx_hal_pcd.c", FilePath="/home/janhenrik/kiCAD/tdr/tdr_firmware/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pcd.c", Line=1345
+OpenDocument="startup_stm32g474xx.s", FilePath="/home/janhenrik/kiCAD/tdr/tdr_firmware/startup_stm32g474xx.s", Line=40
+OpenDocument="main.c", FilePath="/home/janhenrik/kiCAD/tdr/tdr_firmware/Src/main.c", Line=2
+OpenToolbar="Debug", Floating=0, x=0, y=0
+OpenWindow="Registers 1", DockArea=RIGHT, x=0, y=1, w=316, h=672, FilterBarShown=0, ToolBarShown=0, FilteredItems=[], RefreshRate=1
+OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=0, w=316, h=672, FilterBarShown=0, ToolBarShown=0, ExecCountersShown=0, InstEncodingsShown=0
+OpenWindow="Source", x=0, y=0, w=0, h=0, FilterBarShown=0, ToolBarShown=0, ExecCountersShown=0
+OpenWindow="Functions", DockArea=LEFT, x=0, y=0, w=86, h=1350, FilterBarShown=1, ToolBarShown=0
+OpenWindow="Data Sampling", DockArea=BOTTOM, x=0, y=0, w=1131, h=142, FilterBarShown=0, ToolBarShown=0, VisibleTab=0, UniformSampleSpacing=0
+OpenWindow="Console", DockArea=BOTTOM, x=1, y=0, w=279, h=142, FilterBarShown=0, ToolBarShown=0
+TableHeader="Functions", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Address";"Size";"#Insts";"Source"], ColWidths=[27;27;27;27;217]
+TableHeader="Data Sampling Table", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time"], ColWidths=[100;100]
+TableHeader="Data Sampling Setup", SortCol="Expression", SortOrder="ASCENDING", VisibleCols=["Expression";"Type";"Value";"Min";"Max";"Average";"# Changes";"Min. Change";"Max. Change"], ColWidths=[182;51;55;44;48;70;83;93;505]
+TableHeader="Power Sampling", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;100]
+TableHeader="Registers 1", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Description"], ColWidths=[120;92;259]

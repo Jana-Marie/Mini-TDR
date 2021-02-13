@@ -1,0 +1,2131 @@
+ARM GAS  /tmp/cc8HNt2i.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"stm32g4xx_hal_msp.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.HAL_MspInit,"ax",%progbits
+  18              		.align	1
+  19              		.global	HAL_MspInit
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	HAL_MspInit:
+  27              	.LFB246:
+  28              		.file 1 "Src/stm32g4xx_hal_msp.c"
+   1:Src/stm32g4xx_hal_msp.c **** /* USER CODE BEGIN Header */
+   2:Src/stm32g4xx_hal_msp.c **** /**
+   3:Src/stm32g4xx_hal_msp.c ****   ******************************************************************************
+   4:Src/stm32g4xx_hal_msp.c ****   * File Name          : stm32g4xx_hal_msp.c
+   5:Src/stm32g4xx_hal_msp.c ****   * Description        : This file provides code for the MSP Initialization
+   6:Src/stm32g4xx_hal_msp.c ****   *                      and de-Initialization codes.
+   7:Src/stm32g4xx_hal_msp.c ****   ******************************************************************************
+   8:Src/stm32g4xx_hal_msp.c ****   * @attention
+   9:Src/stm32g4xx_hal_msp.c ****   *
+  10:Src/stm32g4xx_hal_msp.c ****   * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
+  11:Src/stm32g4xx_hal_msp.c ****   * All rights reserved.</center></h2>
+  12:Src/stm32g4xx_hal_msp.c ****   *
+  13:Src/stm32g4xx_hal_msp.c ****   * This software component is licensed by ST under BSD 3-Clause license,
+  14:Src/stm32g4xx_hal_msp.c ****   * the "License"; You may not use this file except in compliance with the
+  15:Src/stm32g4xx_hal_msp.c ****   * License. You may obtain a copy of the License at:
+  16:Src/stm32g4xx_hal_msp.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  17:Src/stm32g4xx_hal_msp.c ****   *
+  18:Src/stm32g4xx_hal_msp.c ****   ******************************************************************************
+  19:Src/stm32g4xx_hal_msp.c ****   */
+  20:Src/stm32g4xx_hal_msp.c **** /* USER CODE END Header */
+  21:Src/stm32g4xx_hal_msp.c **** 
+  22:Src/stm32g4xx_hal_msp.c **** /* Includes ------------------------------------------------------------------*/
+  23:Src/stm32g4xx_hal_msp.c **** #include "main.h"
+  24:Src/stm32g4xx_hal_msp.c **** /* USER CODE BEGIN Includes */
+  25:Src/stm32g4xx_hal_msp.c **** 
+  26:Src/stm32g4xx_hal_msp.c **** /* USER CODE END Includes */
+  27:Src/stm32g4xx_hal_msp.c **** extern DMA_HandleTypeDef hdma_hrtim1_a;
+  28:Src/stm32g4xx_hal_msp.c **** 
+  29:Src/stm32g4xx_hal_msp.c **** /* Private typedef -----------------------------------------------------------*/
+  30:Src/stm32g4xx_hal_msp.c **** /* USER CODE BEGIN TD */
+ARM GAS  /tmp/cc8HNt2i.s 			page 2
+
+
+  31:Src/stm32g4xx_hal_msp.c **** 
+  32:Src/stm32g4xx_hal_msp.c **** /* USER CODE END TD */
+  33:Src/stm32g4xx_hal_msp.c **** 
+  34:Src/stm32g4xx_hal_msp.c **** /* Private define ------------------------------------------------------------*/
+  35:Src/stm32g4xx_hal_msp.c **** /* USER CODE BEGIN Define */
+  36:Src/stm32g4xx_hal_msp.c **** 
+  37:Src/stm32g4xx_hal_msp.c **** /* USER CODE END Define */
+  38:Src/stm32g4xx_hal_msp.c **** 
+  39:Src/stm32g4xx_hal_msp.c **** /* Private macro -------------------------------------------------------------*/
+  40:Src/stm32g4xx_hal_msp.c **** /* USER CODE BEGIN Macro */
+  41:Src/stm32g4xx_hal_msp.c **** 
+  42:Src/stm32g4xx_hal_msp.c **** /* USER CODE END Macro */
+  43:Src/stm32g4xx_hal_msp.c **** 
+  44:Src/stm32g4xx_hal_msp.c **** /* Private variables ---------------------------------------------------------*/
+  45:Src/stm32g4xx_hal_msp.c **** /* USER CODE BEGIN PV */
+  46:Src/stm32g4xx_hal_msp.c **** 
+  47:Src/stm32g4xx_hal_msp.c **** /* USER CODE END PV */
+  48:Src/stm32g4xx_hal_msp.c **** 
+  49:Src/stm32g4xx_hal_msp.c **** /* Private function prototypes -----------------------------------------------*/
+  50:Src/stm32g4xx_hal_msp.c **** /* USER CODE BEGIN PFP */
+  51:Src/stm32g4xx_hal_msp.c **** 
+  52:Src/stm32g4xx_hal_msp.c **** /* USER CODE END PFP */
+  53:Src/stm32g4xx_hal_msp.c **** 
+  54:Src/stm32g4xx_hal_msp.c **** /* External functions --------------------------------------------------------*/
+  55:Src/stm32g4xx_hal_msp.c **** /* USER CODE BEGIN ExternalFunctions */
+  56:Src/stm32g4xx_hal_msp.c **** 
+  57:Src/stm32g4xx_hal_msp.c **** /* USER CODE END ExternalFunctions */
+  58:Src/stm32g4xx_hal_msp.c **** 
+  59:Src/stm32g4xx_hal_msp.c **** /* USER CODE BEGIN 0 */
+  60:Src/stm32g4xx_hal_msp.c **** 
+  61:Src/stm32g4xx_hal_msp.c **** /* USER CODE END 0 */
+  62:Src/stm32g4xx_hal_msp.c **** 
+  63:Src/stm32g4xx_hal_msp.c **** void HAL_HRTIM_MspPostInit(HRTIM_HandleTypeDef *hhrtim);
+  64:Src/stm32g4xx_hal_msp.c ****                     /**
+  65:Src/stm32g4xx_hal_msp.c ****   * Initializes the Global MSP.
+  66:Src/stm32g4xx_hal_msp.c ****   */
+  67:Src/stm32g4xx_hal_msp.c **** void HAL_MspInit(void)
+  68:Src/stm32g4xx_hal_msp.c **** {
+  29              		.loc 1 68 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 8
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  34 0000 82B0     		sub	sp, sp, #8
+  35              	.LCFI0:
+  36              		.cfi_def_cfa_offset 8
+  69:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN MspInit 0 */
+  70:Src/stm32g4xx_hal_msp.c **** 
+  71:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END MspInit 0 */
+  72:Src/stm32g4xx_hal_msp.c **** 
+  73:Src/stm32g4xx_hal_msp.c ****   __HAL_RCC_SYSCFG_CLK_ENABLE();
+  37              		.loc 1 73 3 view .LVU1
+  38              	.LBB6:
+  39              		.loc 1 73 3 view .LVU2
+  40              		.loc 1 73 3 view .LVU3
+  41 0002 0D4B     		ldr	r3, .L3
+  42 0004 1A6E     		ldr	r2, [r3, #96]
+ARM GAS  /tmp/cc8HNt2i.s 			page 3
+
+
+  43 0006 42F00102 		orr	r2, r2, #1
+  44 000a 1A66     		str	r2, [r3, #96]
+  45              		.loc 1 73 3 view .LVU4
+  46 000c 1A6E     		ldr	r2, [r3, #96]
+  47 000e 02F00102 		and	r2, r2, #1
+  48 0012 0092     		str	r2, [sp]
+  49              		.loc 1 73 3 view .LVU5
+  50 0014 009A     		ldr	r2, [sp]
+  51              	.LBE6:
+  52              		.loc 1 73 3 view .LVU6
+  74:Src/stm32g4xx_hal_msp.c ****   __HAL_RCC_PWR_CLK_ENABLE();
+  53              		.loc 1 74 3 view .LVU7
+  54              	.LBB7:
+  55              		.loc 1 74 3 view .LVU8
+  56              		.loc 1 74 3 view .LVU9
+  57 0016 9A6D     		ldr	r2, [r3, #88]
+  58 0018 42F08052 		orr	r2, r2, #268435456
+  59 001c 9A65     		str	r2, [r3, #88]
+  60              		.loc 1 74 3 view .LVU10
+  61 001e 9B6D     		ldr	r3, [r3, #88]
+  62 0020 03F08053 		and	r3, r3, #268435456
+  63 0024 0193     		str	r3, [sp, #4]
+  64              		.loc 1 74 3 view .LVU11
+  65 0026 019B     		ldr	r3, [sp, #4]
+  66              	.LBE7:
+  67              		.loc 1 74 3 view .LVU12
+  75:Src/stm32g4xx_hal_msp.c **** 
+  76:Src/stm32g4xx_hal_msp.c ****   /* System interrupt init*/
+  77:Src/stm32g4xx_hal_msp.c **** 
+  78:Src/stm32g4xx_hal_msp.c ****   /** Disable the internal Pull-Up in Dead Battery pins of UCPD peripheral
+  79:Src/stm32g4xx_hal_msp.c ****   */
+  80:Src/stm32g4xx_hal_msp.c ****   LL_PWR_DisableDeadBatteryPD();
+  68              		.loc 1 80 3 view .LVU13
+  69              	.LBB8:
+  70              	.LBI8:
+  71              		.file 2 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h"
+   1:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+   2:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   ******************************************************************************
+   3:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @file    stm32g4xx_ll_pwr.h
+   4:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @author  MCD Application Team
+   5:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief   Header file of PWR LL module.
+   6:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   ******************************************************************************
+   7:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @attention
+   8:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *
+   9:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
+  10:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * All rights reserved.</center></h2>
+  11:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *
+  12:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * This software component is licensed by ST under BSD 3-Clause license,
+  13:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * the "License"; You may not use this file except in compliance with the
+  14:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * License. You may obtain a copy of the License at:
+  15:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *                        opensource.org/licenses/BSD-3-Clause
+  16:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *
+  17:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   ******************************************************************************
+  18:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+  19:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+  20:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /* Define to prevent recursive inclusion -------------------------------------*/
+  21:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #ifndef STM32G4xx_LL_PWR_H
+ARM GAS  /tmp/cc8HNt2i.s 			page 4
+
+
+  22:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define STM32G4xx_LL_PWR_H
+  23:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+  24:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #ifdef __cplusplus
+  25:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** extern "C" {
+  26:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif
+  27:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+  28:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /* Includes ------------------------------------------------------------------*/
+  29:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #include "stm32g4xx.h"
+  30:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+  31:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @addtogroup STM32G4xx_LL_Driver
+  32:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @{
+  33:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+  34:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+  35:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #if defined(PWR)
+  36:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+  37:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @defgroup PWR_LL PWR
+  38:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @{
+  39:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+  40:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+  41:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /* Private types -------------------------------------------------------------*/
+  42:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /* Private variables ---------------------------------------------------------*/
+  43:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+  44:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /* Private constants ---------------------------------------------------------*/
+  45:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+  46:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /* Private macros ------------------------------------------------------------*/
+  47:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+  48:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /* Exported types ------------------------------------------------------------*/
+  49:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /* Exported constants --------------------------------------------------------*/
+  50:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @defgroup PWR_LL_Exported_Constants PWR Exported Constants
+  51:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @{
+  52:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+  53:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+  54:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @defgroup PWR_LL_EC_CLEAR_FLAG Clear Flags Defines
+  55:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief    Flags defines which can be used with LL_PWR_WriteReg function
+  56:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @{
+  57:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+  58:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SCR_CSBF                    PWR_SCR_CSBF
+  59:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SCR_CWUF                    PWR_SCR_CWUF
+  60:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SCR_CWUF5                   PWR_SCR_CWUF5
+  61:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SCR_CWUF4                   PWR_SCR_CWUF4
+  62:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SCR_CWUF3                   PWR_SCR_CWUF3
+  63:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SCR_CWUF2                   PWR_SCR_CWUF2
+  64:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SCR_CWUF1                   PWR_SCR_CWUF1
+  65:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+  66:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @}
+  67:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+  68:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+  69:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @defgroup PWR_LL_EC_GET_FLAG Get Flags Defines
+  70:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief    Flags defines which can be used with LL_PWR_ReadReg function
+  71:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @{
+  72:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+  73:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SR1_WUFI                    PWR_SR1_WUFI
+  74:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SR1_SBF                     PWR_SR1_SBF
+  75:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SR1_WUF5                    PWR_SR1_WUF5
+  76:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SR1_WUF4                    PWR_SR1_WUF4
+  77:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SR1_WUF3                    PWR_SR1_WUF3
+  78:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SR1_WUF2                    PWR_SR1_WUF2
+ARM GAS  /tmp/cc8HNt2i.s 			page 5
+
+
+  79:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SR1_WUF1                    PWR_SR1_WUF1
+  80:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #if defined(PWR_SR2_PVMO4)
+  81:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SR2_PVMO4                   PWR_SR2_PVMO4
+  82:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif /* PWR_SR2_PVMO4 */
+  83:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #if defined(PWR_SR2_PVMO3)
+  84:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SR2_PVMO3                   PWR_SR2_PVMO3
+  85:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif /* PWR_SR2_PVMO3 */
+  86:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #if defined(PWR_SR2_PVMO2)
+  87:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SR2_PVMO2                   PWR_SR2_PVMO2
+  88:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif /* PWR_SR2_PVMO2 */
+  89:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #if defined(PWR_SR2_PVMO1)
+  90:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SR2_PVMO1                   PWR_SR2_PVMO1
+  91:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif /* PWR_SR2_PVMO1 */
+  92:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SR2_PVDO                    PWR_SR2_PVDO
+  93:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SR2_VOSF                    PWR_SR2_VOSF
+  94:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SR2_REGLPF                  PWR_SR2_REGLPF
+  95:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SR2_REGLPS                  PWR_SR2_REGLPS
+  96:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+  97:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @}
+  98:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+  99:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 100:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @defgroup PWR_LL_EC_REGU_VOLTAGE REGU VOLTAGE
+ 101:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @{
+ 102:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 103:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_REGU_VOLTAGE_SCALE1         (PWR_CR1_VOS_0)
+ 104:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_REGU_VOLTAGE_SCALE2         (PWR_CR1_VOS_1)
+ 105:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 106:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @}
+ 107:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 108:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 109:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @defgroup PWR_LL_EC_MODE_PWR MODE PWR
+ 110:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @{
+ 111:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 112:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_MODE_STOP0                  (PWR_CR1_LPMS_STOP0)
+ 113:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_MODE_STOP1                  (PWR_CR1_LPMS_STOP1)
+ 114:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_MODE_STANDBY                (PWR_CR1_LPMS_STANDBY)
+ 115:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_MODE_SHUTDOWN               (PWR_CR1_LPMS_SHUTDOWN)
+ 116:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 117:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @}
+ 118:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 119:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 120:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @defgroup PWR_LL_EC_PVM_VDDUSB_1 Peripheral voltage monitoring
+ 121:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @{
+ 122:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 123:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #if defined(PWR_CR2_PVME1)
+ 124:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVM_VDDA_COMP               (PWR_CR2_PVME1)     /* Monitoring VDDA vs. x.xV */
+ 125:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif
+ 126:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #if defined(PWR_CR2_PVME2)
+ 127:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVM_VDDA_FASTDAC            (PWR_CR2_PVME2)     /* Monitoring VDDA vs. x.xV */
+ 128:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif
+ 129:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #if defined(PWR_CR2_PVME3)
+ 130:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVM_VDDA_ADC                (PWR_CR2_PVME3)     /* Monitoring VDDA vs. 1.62V  */
+ 131:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif
+ 132:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #if defined(PWR_CR2_PVME4)
+ 133:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVM_VDDA_OPAMP_DAC          (PWR_CR2_PVME4)     /* Monitoring VDDA vs. 1x.xV   */
+ 134:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif
+ 135:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ARM GAS  /tmp/cc8HNt2i.s 			page 6
+
+
+ 136:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @}
+ 137:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 138:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 139:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @defgroup PWR_LL_EC_PVDLEVEL PVDLEVEL
+ 140:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @{
+ 141:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 142:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVDLEVEL_0                  (PWR_CR2_PLS_LEV0)  /* VPVD0 around 2.0 V */
+ 143:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVDLEVEL_1                  (PWR_CR2_PLS_LEV1)  /* VPVD1 around 2.2 V */
+ 144:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVDLEVEL_2                  (PWR_CR2_PLS_LEV2)  /* VPVD2 around 2.4 V */
+ 145:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVDLEVEL_3                  (PWR_CR2_PLS_LEV3)  /* VPVD3 around 2.5 V */
+ 146:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVDLEVEL_4                  (PWR_CR2_PLS_LEV4)  /* VPVD4 around 2.6 V */
+ 147:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVDLEVEL_5                  (PWR_CR2_PLS_LEV5)  /* VPVD5 around 2.8 V */
+ 148:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVDLEVEL_6                  (PWR_CR2_PLS_LEV6)  /* VPVD6 around 2.9 V */
+ 149:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVDLEVEL_7                  (PWR_CR2_PLS_LEV7)  /* External input analog voltage   (
+ 150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 151:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @}
+ 152:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 153:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 154:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @defgroup PWR_LL_EC_WAKEUP WAKEUP
+ 155:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @{
+ 156:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 157:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_WAKEUP_PIN1                 (PWR_CR3_EWUP1)
+ 158:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_WAKEUP_PIN2                 (PWR_CR3_EWUP2)
+ 159:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_WAKEUP_PIN3                 (PWR_CR3_EWUP3)
+ 160:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_WAKEUP_PIN4                 (PWR_CR3_EWUP4)
+ 161:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_WAKEUP_PIN5                 (PWR_CR3_EWUP5)
+ 162:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 163:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @}
+ 164:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 165:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 166:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @defgroup PWR_LL_EC_BATT_CHARG_RESISTOR BATT CHARG RESISTOR
+ 167:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @{
+ 168:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 169:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_BATT_CHARG_RESISTOR_5K      ((uint32_t)0x00000000)
+ 170:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_BATT_CHARGRESISTOR_1_5K     (PWR_CR4_VBRS)
+ 171:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 172:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @}
+ 173:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 174:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 175:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @defgroup PWR_LL_EC_GPIO GPIO
+ 176:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @{
+ 177:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 178:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_A                      ((uint32_t)(&(PWR->PUCRA)))
+ 179:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_B                      ((uint32_t)(&(PWR->PUCRB)))
+ 180:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_C                      ((uint32_t)(&(PWR->PUCRC)))
+ 181:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_D                      ((uint32_t)(&(PWR->PUCRD)))
+ 182:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_E                      ((uint32_t)(&(PWR->PUCRE)))
+ 183:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_F                      ((uint32_t)(&(PWR->PUCRF)))
+ 184:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_G                      ((uint32_t)(&(PWR->PUCRG)))
+ 185:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 186:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @}
+ 187:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 188:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 189:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @defgroup PWR_LL_EC_GPIO_BIT GPIO BIT
+ 190:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @{
+ 191:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 192:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_0                  ((uint32_t)0x00000001)
+ARM GAS  /tmp/cc8HNt2i.s 			page 7
+
+
+ 193:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_1                  ((uint32_t)0x00000002)
+ 194:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_2                  ((uint32_t)0x00000004)
+ 195:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_3                  ((uint32_t)0x00000008)
+ 196:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_4                  ((uint32_t)0x00000010)
+ 197:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_5                  ((uint32_t)0x00000020)
+ 198:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_6                  ((uint32_t)0x00000040)
+ 199:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_7                  ((uint32_t)0x00000080)
+ 200:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_8                  ((uint32_t)0x00000100)
+ 201:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_9                  ((uint32_t)0x00000200)
+ 202:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_10                 ((uint32_t)0x00000400)
+ 203:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_11                 ((uint32_t)0x00000800)
+ 204:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_12                 ((uint32_t)0x00001000)
+ 205:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_13                 ((uint32_t)0x00002000)
+ 206:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_14                 ((uint32_t)0x00004000)
+ 207:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_15                 ((uint32_t)0x00008000)
+ 208:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 209:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @}
+ 210:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 211:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 212:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 213:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @}
+ 214:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 215:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 216:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /* Exported macro ------------------------------------------------------------*/
+ 217:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @defgroup PWR_LL_Exported_Macros PWR Exported Macros
+ 218:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @{
+ 219:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 220:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 221:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @defgroup PWR_LL_EM_WRITE_READ Common Write and read registers Macros
+ 222:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @{
+ 223:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 224:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 225:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 226:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Write a value in PWR register
+ 227:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @param  __REG__ Register to be written
+ 228:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @param  __VALUE__ Value to be written in the register
+ 229:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 230:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 231:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_WriteReg(__REG__, __VALUE__) WRITE_REG(PWR->__REG__, (__VALUE__))
+ 232:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 233:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 234:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Read a value in PWR register
+ 235:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @param  __REG__ Register to be read
+ 236:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval Register value
+ 237:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 238:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_ReadReg(__REG__) READ_REG(PWR->__REG__)
+ 239:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 240:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @}
+ 241:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 242:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 243:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 244:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @}
+ 245:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 246:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 247:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 248:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /* Exported functions --------------------------------------------------------*/
+ 249:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @defgroup PWR_LL_Exported_Functions PWR Exported Functions
+ARM GAS  /tmp/cc8HNt2i.s 			page 8
+
+
+ 250:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @{
+ 251:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 252:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 253:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @defgroup PWR_LL_EF_Configuration Configuration
+ 254:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @{
+ 255:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 256:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 257:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 258:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Switch the regulator from main mode to low-power mode
+ 259:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          LPR           LL_PWR_EnableLowPowerRunMode
+ 260:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 261:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 262:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_EnableLowPowerRunMode(void)
+ 263:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   SET_BIT(PWR->CR1, PWR_CR1_LPR);
+ 265:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 266:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 267:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 268:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Switch the regulator from low-power mode to main mode
+ 269:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          LPR           LL_PWR_DisableLowPowerRunMode
+ 270:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 271:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 272:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_DisableLowPowerRunMode(void)
+ 273:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 274:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   CLEAR_BIT(PWR->CR1, PWR_CR1_LPR);
+ 275:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 276:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 277:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 278:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Check if the regulator is in low-power mode
+ 279:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          LPR           LL_PWR_IsEnabledLowPowerRunMode
+ 280:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval State of bit (1 or 0).
+ 281:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 282:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE uint32_t LL_PWR_IsEnabledLowPowerRunMode(void)
+ 283:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 284:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   uint32_t temp;
+ 285:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   temp = READ_BIT(PWR->CR1, PWR_CR1_LPR);
+ 286:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 287:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   return ((temp == (PWR_CR1_LPR))?1U:0U);
+ 288:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 289:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 290:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 291:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 292:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Switch from run main mode to run low-power mode.
+ 293:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          LPR           LL_PWR_EnterLowPowerRunMode
+ 294:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 295:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 296:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_EnterLowPowerRunMode(void)
+ 297:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 298:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   LL_PWR_EnableLowPowerRunMode();
+ 299:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 300:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 301:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 302:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Switch from run main mode to low-power mode.
+ 303:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          LPR           LL_PWR_ExitLowPowerRunMode
+ 304:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 305:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 306:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_ExitLowPowerRunMode(void)
+ARM GAS  /tmp/cc8HNt2i.s 			page 9
+
+
+ 307:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 308:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   LL_PWR_DisableLowPowerRunMode();
+ 309:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 310:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 311:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 312:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Set the main internal regulator output voltage
+ 313:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          VOS           LL_PWR_SetRegulVoltageScaling
+ 314:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @param  VoltageScaling This parameter can be one of the following values:
+ 315:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_REGU_VOLTAGE_SCALE1
+ 316:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_REGU_VOLTAGE_SCALE2
+ 317:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 318:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 319:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_SetRegulVoltageScaling(uint32_t VoltageScaling)
+ 320:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 321:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   MODIFY_REG(PWR->CR1, PWR_CR1_VOS, VoltageScaling);
+ 322:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 323:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 324:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 325:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Get the main internal regulator output voltage
+ 326:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          VOS           LL_PWR_GetRegulVoltageScaling
+ 327:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval Returned value can be one of the following values:
+ 328:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_REGU_VOLTAGE_SCALE1
+ 329:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_REGU_VOLTAGE_SCALE2
+ 330:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 331:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE uint32_t LL_PWR_GetRegulVoltageScaling(void)
+ 332:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 333:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   return (uint32_t)(READ_BIT(PWR->CR1, PWR_CR1_VOS));
+ 334:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 335:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 336:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #if defined(PWR_CR5_R1MODE)
+ 337:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 338:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Enable main regulator voltage range 1 boost mode
+ 339:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR5          R1MODE        LL_PWR_EnableRange1BoostMode
+ 340:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 341:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 342:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_EnableRange1BoostMode(void)
+ 343:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 344:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   CLEAR_BIT(PWR->CR5, PWR_CR5_R1MODE);
+ 345:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 346:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 347:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 348:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Disable main regulator voltage range 1 boost mode
+ 349:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR5          R1MODE        LL_PWR_DisableRange1BoostMode
+ 350:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 351:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 352:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_DisableRange1BoostMode(void)
+ 353:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 354:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   SET_BIT(PWR->CR5, PWR_CR5_R1MODE);
+ 355:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 356:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 357:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 358:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Check if the main regulator voltage range 1 boost mode is enabled
+ 359:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR5          R1MODE        LL_PWR_IsEnabledRange1BoostMode
+ 360:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval Inverted state of bit (0 or 1).
+ 361:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 362:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE uint32_t LL_PWR_IsEnabledRange1BoostMode(void)
+ 363:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ARM GAS  /tmp/cc8HNt2i.s 			page 10
+
+
+ 364:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   uint32_t temp;
+ 365:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   temp = READ_BIT(PWR->CR5, PWR_CR5_R1MODE);
+ 366:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 367:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   return ((temp == (0U))?1U:0U);
+ 368:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 369:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif /* PWR_CR5_R1MODE */
+ 370:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 371:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 372:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Enable access to the backup domain
+ 373:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          DBP           LL_PWR_EnableBkUpAccess
+ 374:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 375:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 376:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_EnableBkUpAccess(void)
+ 377:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 378:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   SET_BIT(PWR->CR1, PWR_CR1_DBP);
+ 379:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 380:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 381:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 382:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Disable access to the backup domain
+ 383:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          DBP           LL_PWR_DisableBkUpAccess
+ 384:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 385:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 386:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_DisableBkUpAccess(void)
+ 387:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 388:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   CLEAR_BIT(PWR->CR1, PWR_CR1_DBP);
+ 389:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 390:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 391:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 392:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Check if the backup domain is enabled
+ 393:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          DBP           LL_PWR_IsEnabledBkUpAccess
+ 394:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval State of bit (1 or 0).
+ 395:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 396:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE uint32_t LL_PWR_IsEnabledBkUpAccess(void)
+ 397:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 398:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   uint32_t temp;
+ 399:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   temp = READ_BIT(PWR->CR1, PWR_CR1_DBP);
+ 400:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 401:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   return ((temp == (PWR_CR1_DBP))?1U:0U);
+ 402:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 403:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 404:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 405:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 406:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Set Low-Power mode
+ 407:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          LPMS          LL_PWR_SetPowerMode
+ 408:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @param  LowPowerMode This parameter can be one of the following values:
+ 409:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_MODE_STOP0
+ 410:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_MODE_STOP1
+ 411:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_MODE_STANDBY
+ 412:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_MODE_SHUTDOWN
+ 413:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 414:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 415:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_SetPowerMode(uint32_t LowPowerMode)
+ 416:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 417:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   MODIFY_REG(PWR->CR1, PWR_CR1_LPMS, LowPowerMode);
+ 418:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 419:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 420:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ARM GAS  /tmp/cc8HNt2i.s 			page 11
+
+
+ 421:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Get Low-Power mode
+ 422:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          LPMS          LL_PWR_GetPowerMode
+ 423:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval Returned value can be one of the following values:
+ 424:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_MODE_STOP0
+ 425:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_MODE_STOP1
+ 426:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_MODE_STANDBY
+ 427:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_MODE_SHUTDOWN
+ 428:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 429:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE uint32_t LL_PWR_GetPowerMode(void)
+ 430:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 431:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   return (uint32_t)(READ_BIT(PWR->CR1, PWR_CR1_LPMS));
+ 432:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 433:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 434:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #if defined(PWR_CR3_UCPD_STDBY)
+ 435:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 436:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Enable (write 1) the USB Type-C and Power Delivery standby mode.
+ 437:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @note Enable just before entering standby when using UCPD1.
+ 438:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR3          UCPD1_STDBY           LL_PWR_EnableUSBStandByModePD
+ 439:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 440:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 441:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_EnableUSBStandByModePD(void)
+ 442:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 443:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   SET_BIT(PWR->CR3, PWR_CR3_UCPD_STDBY);
+ 444:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 445:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 446:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 447:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Disable (write 0) USB Type-C and Power Delivery standby mode.
+ 448:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @note Disable immediately after standby exit when using UCPD1,
+ 449:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *      (and before writing any UCPD1 registers).
+ 450:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR3          UCPD1_STDBY           LL_PWR_DisableUSBStandByModePD
+ 451:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 452:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 453:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_DisableUSBStandByModePD(void)
+ 454:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 455:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   CLEAR_BIT(PWR->CR3, PWR_CR3_UCPD_STDBY);
+ 456:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 457:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 458:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 459:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Check the USB Type-C and Power Delivery standby mode.
+ 460:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR3          UCPD1_STDBY           LL_PWR_IsEnabledUSBStandByModePD
+ 461:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval State of bit (1 or 0).
+ 462:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 463:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE uint32_t LL_PWR_IsEnabledUSBStandByModePD(void)
+ 464:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 465:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 466:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   return ((READ_BIT(PWR->CR3, PWR_CR3_UCPD_STDBY) == (PWR_CR3_UCPD_STDBY))?1UL:0UL);
+ 467:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 468:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 469:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif /* PWR_CR3_UCPD_STDBY */
+ 470:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 471:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #if defined(PWR_CR3_UCPD_DBDIS)
+ 472:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 473:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Enable (write 0) USB Type-C dead battery pull-down behavior
+ 474:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * on UCPD1_CC1 and UCPD1_CC2 pins.
+ 475:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @note After exiting reset, the USB Type-C “dead battery” behavior will be enabled,
+ 476:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * which may have a pull-down effect on CC1 and CC2 pins. It is recommended to disable it
+ 477:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * in all cases, either to stop this pull-down or to hand over control to the UCPD1
+ARM GAS  /tmp/cc8HNt2i.s 			page 12
+
+
+ 478:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * (which should therefore be initialized before doing the disable).
+ 479:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR3          PWR_CR3_UCPD_DBDIS           LL_PWR_EnableUSBDeadBattery
+ 480:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 481:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 482:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_EnableUSBDeadBattery(void)
+ 483:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 484:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   CLEAR_BIT(PWR->CR3, PWR_CR3_UCPD_DBDIS);
+ 485:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 486:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 487:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 488:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Disable (write 1) USB Type-C dead battery pull-down behavior
+ 489:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *  on UCPD1_CC1 and UCPD1_CC2 pins.
+ 490:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @note After exiting reset, the USB Type-C “dead battery” behavior will be enabled,
+ 491:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * which may have a pull-down effect on CC1 and CC2 pins. It is recommended to disable it
+ 492:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * in all cases, either to stop this pull-down or to hand over control to the UCPD1
+ 493:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * (which should therefore be initialized before doing the disable).
+ 494:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR3          PWR_CR3_UCPD_DBDIS           LL_PWR_DisableUSBDeadBattery
+ 495:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 496:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 497:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_DisableUSBDeadBattery(void)
+ 498:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 499:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   SET_BIT(PWR->CR3, PWR_CR3_UCPD_DBDIS);
+ 500:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 501:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 502:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 503:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Check USB Type-C dead battery pull-down behavior
+ 504:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         on UCPD1_CC1 and UCPD1_CC2 pins.
+ 505:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @note After exiting reset, the USB Type-C “dead battery” behavior will be enabled,
+ 506:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * which may have a pull-down effect on CC1 and CC2 pins. It is recommended to disable it
+ 507:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * in all cases, either to stop this pull-down or to hand over control to the UCPD1
+ 508:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * (which should therefore be initialized before doing the disable).
+ 509:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR3          PWR_CR3_UCPD_DBDIS           LL_PWR_IsEnabledUSBDeadBattery
+ 510:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval State of bit.
+ 511:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 512:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE uint32_t LL_PWR_IsEnabledUSBDeadBattery(void)
+ 513:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 514:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 515:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   return ((READ_BIT(PWR->CR3, PWR_CR3_UCPD_DBDIS) == (PWR_CR3_UCPD_DBDIS))?1UL:0UL);
+ 516:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 517:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 518:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif /* PWR_CR3_UCPD_DBDIS */
+ 519:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 520:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #if defined(PWR_CR2_USV)
+ 521:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 522:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Enable VDDUSB supply
+ 523:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          USV           LL_PWR_EnableVddUSB
+ 524:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 525:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 526:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_EnableVddUSB(void)
+ 527:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 528:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   SET_BIT(PWR->CR2, PWR_CR2_USV);
+ 529:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 530:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 531:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 532:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Disable VDDUSB supply
+ 533:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          USV           LL_PWR_DisableVddUSB
+ 534:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ARM GAS  /tmp/cc8HNt2i.s 			page 13
+
+
+ 535:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 536:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_DisableVddUSB(void)
+ 537:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 538:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   CLEAR_BIT(PWR->CR2, PWR_CR2_USV);
+ 539:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 540:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 541:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 542:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Check if VDDUSB supply is enabled
+ 543:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          USV           LL_PWR_IsEnabledVddUSB
+ 544:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval State of bit (1 or 0).
+ 545:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 546:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE uint32_t LL_PWR_IsEnabledVddUSB(void)
+ 547:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 548:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   uint32_t temp;
+ 549:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   temp = READ_BIT(PWR->CR2, PWR_CR2_USV);
+ 550:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 551:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   return ((temp == (PWR_CR2_USV))?1U:0U);
+ 552:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 553:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 554:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif
+ 555:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 556:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #if defined(PWR_CR2_IOSV)
+ 557:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 558:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Enable VDDIO2 supply
+ 559:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          IOSV          LL_PWR_EnableVddIO2
+ 560:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 561:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 562:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_EnableVddIO2(void)
+ 563:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 564:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   SET_BIT(PWR->CR2, PWR_CR2_IOSV);
+ 565:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 566:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 567:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 568:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Disable VDDIO2 supply
+ 569:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          IOSV          LL_PWR_DisableVddIO2
+ 570:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 571:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 572:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_DisableVddIO2(void)
+ 573:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 574:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   CLEAR_BIT(PWR->CR2, PWR_CR2_IOSV);
+ 575:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 576:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 577:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 578:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Check if VDDIO2 supply is enabled
+ 579:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          IOSV          LL_PWR_IsEnabledVddIO2
+ 580:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval State of bit (1 or 0).
+ 581:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 582:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE uint32_t LL_PWR_IsEnabledVddIO2(void)
+ 583:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 584:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   uint32_t temp;
+ 585:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   temp = READ_BIT(PWR->CR2, PWR_CR2_IOSV);
+ 586:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 587:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   return ((temp == (PWR_CR2_IOSV))?1U:0U);
+ 588:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 589:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 590:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif
+ 591:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ARM GAS  /tmp/cc8HNt2i.s 			page 14
+
+
+ 592:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 593:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Enable the Power Voltage Monitoring on a peripheral
+ 594:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          PVME1         LL_PWR_EnablePVM\n
+ 595:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         CR2          PVME2         LL_PWR_EnablePVM\n
+ 596:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         CR2          PVME3         LL_PWR_EnablePVM\n
+ 597:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         CR2          PVME4         LL_PWR_EnablePVM
+ 598:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @param  PeriphVoltage This parameter can be one of the following values:
+ 599:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_COMP     (*)
+ 600:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_FASTDAC  (*)
+ 601:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_ADC      
+ 602:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_OPAMP_DAC
+ 603:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *
+ 604:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         (*) value not defined in all devices
+ 605:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 606:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 607:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_EnablePVM(uint32_t PeriphVoltage)
+ 608:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 609:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   SET_BIT(PWR->CR2, PeriphVoltage);
+ 610:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 611:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 612:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 613:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Disable the Power Voltage Monitoring on a peripheral
+ 614:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          PVME1         LL_PWR_DisablePVM\n
+ 615:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         CR2          PVME2         LL_PWR_DisablePVM\n
+ 616:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         CR2          PVME3         LL_PWR_DisablePVM\n
+ 617:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         CR2          PVME4         LL_PWR_DisablePVM
+ 618:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @param  PeriphVoltage This parameter can be one of the following values:
+ 619:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_COMP     (*)
+ 620:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_FASTDAC  (*)
+ 621:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_ADC      
+ 622:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_OPAMP_DAC
+ 623:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *
+ 624:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         (*) value not defined in all devices
+ 625:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 626:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 627:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_DisablePVM(uint32_t PeriphVoltage)
+ 628:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 629:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   CLEAR_BIT(PWR->CR2, PeriphVoltage);
+ 630:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 631:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 632:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 633:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Check if Power Voltage Monitoring is enabled on a peripheral
+ 634:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          PVME1         LL_PWR_IsEnabledPVM\n
+ 635:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         CR2          PVME2         LL_PWR_IsEnabledPVM\n
+ 636:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         CR2          PVME3         LL_PWR_IsEnabledPVM\n
+ 637:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         CR2          PVME4         LL_PWR_IsEnabledPVM
+ 638:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @param  PeriphVoltage This parameter can be one of the following values:
+ 639:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_COMP     (*)
+ 640:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_FASTDAC  (*)
+ 641:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_ADC      
+ 642:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_OPAMP_DAC
+ 643:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *
+ 644:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         (*) value not defined in all devices
+ 645:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval State of bit (1 or 0).
+ 646:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 647:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE uint32_t LL_PWR_IsEnabledPVM(uint32_t PeriphVoltage)
+ 648:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ARM GAS  /tmp/cc8HNt2i.s 			page 15
+
+
+ 649:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   uint32_t temp;
+ 650:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   temp = READ_BIT(PWR->CR2, PeriphVoltage);
+ 651:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 652:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   return ((temp == (PeriphVoltage))?1U:0U);
+ 653:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 654:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 655:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 656:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 657:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Configure the voltage threshold detected by the Power Voltage Detector
+ 658:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          PLS           LL_PWR_SetPVDLevel
+ 659:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @param  PVDLevel This parameter can be one of the following values:
+ 660:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVDLEVEL_0
+ 661:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVDLEVEL_1
+ 662:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVDLEVEL_2
+ 663:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVDLEVEL_3
+ 664:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVDLEVEL_4
+ 665:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVDLEVEL_5
+ 666:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVDLEVEL_6
+ 667:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVDLEVEL_7
+ 668:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 669:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 670:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_SetPVDLevel(uint32_t PVDLevel)
+ 671:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 672:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   MODIFY_REG(PWR->CR2, PWR_CR2_PLS, PVDLevel);
+ 673:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 674:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 675:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 676:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Get the voltage threshold detection
+ 677:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          PLS           LL_PWR_GetPVDLevel
+ 678:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval Returned value can be one of the following values:
+ 679:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVDLEVEL_0
+ 680:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVDLEVEL_1
+ 681:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVDLEVEL_2
+ 682:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVDLEVEL_3
+ 683:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVDLEVEL_4
+ 684:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVDLEVEL_5
+ 685:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVDLEVEL_6
+ 686:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVDLEVEL_7
+ 687:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 688:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE uint32_t LL_PWR_GetPVDLevel(void)
+ 689:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 690:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   return (uint32_t)(READ_BIT(PWR->CR2, PWR_CR2_PLS));
+ 691:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 692:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 693:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 694:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Enable Power Voltage Detector
+ 695:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          PVDE          LL_PWR_EnablePVD
+ 696:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 697:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 698:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_EnablePVD(void)
+ 699:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 700:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   SET_BIT(PWR->CR2, PWR_CR2_PVDE);
+ 701:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 702:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 703:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 704:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Disable Power Voltage Detector
+ 705:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          PVDE          LL_PWR_DisablePVD
+ARM GAS  /tmp/cc8HNt2i.s 			page 16
+
+
+ 706:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 707:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 708:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_DisablePVD(void)
+ 709:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 710:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   CLEAR_BIT(PWR->CR2, PWR_CR2_PVDE);
+ 711:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 712:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 713:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 714:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Check if Power Voltage Detector is enabled
+ 715:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          PVDE          LL_PWR_IsEnabledPVD
+ 716:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval State of bit (1 or 0).
+ 717:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 718:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE uint32_t LL_PWR_IsEnabledPVD(void)
+ 719:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 720:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   uint32_t temp;
+ 721:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   temp = READ_BIT(PWR->CR2, PWR_CR2_PVDE);
+ 722:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 723:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   return ((temp == (PWR_CR2_PVDE))?1U:0U);
+ 724:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 725:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 726:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 727:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Enable Internal Wake-up line
+ 728:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR3          EIWF          LL_PWR_EnableInternWU
+ 729:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 730:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 731:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_EnableInternWU(void)
+ 732:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 733:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   SET_BIT(PWR->CR3, PWR_CR3_EIWF);
+ 734:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 735:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 736:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 737:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Disable Internal Wake-up line
+ 738:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR3          EIWF          LL_PWR_DisableInternWU
+ 739:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 740:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 741:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_DisableInternWU(void)
+ 742:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 743:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   CLEAR_BIT(PWR->CR3, PWR_CR3_EIWF);
+ 744:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 745:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 746:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 747:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Check if Internal Wake-up line is enabled
+ 748:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR3          EIWF          LL_PWR_IsEnabledInternWU
+ 749:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval State of bit (1 or 0).
+ 750:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 751:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE uint32_t LL_PWR_IsEnabledInternWU(void)
+ 752:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 753:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   return ((READ_BIT(PWR->CR3, PWR_CR3_EIWF) == (PWR_CR3_EIWF))?1UL:0UL);
+ 754:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 755:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 756:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #if defined (PWR_CR3_UCPD_DBDIS)
+ 757:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 758:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Enable USB Type-C and Power Delivery Dead Battery disable
+ 759:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR3          UCPD_DBDIS          LL_PWR_EnableDeadBatteryPD
+ 760:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 761:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 762:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_EnableDeadBatteryPD(void)
+ARM GAS  /tmp/cc8HNt2i.s 			page 17
+
+
+ 763:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 764:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   SET_BIT(PWR->CR3, PWR_CR3_UCPD_DBDIS);
+ 765:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
+ 766:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
+ 767:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
+ 768:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Disable USB Type-C and Power Delivery Dead Battery disable
+ 769:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR3          UCPD_DBDIS          LL_PWR_DisableDeadBatteryPD
+ 770:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
+ 771:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
+ 772:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_DisableDeadBatteryPD(void)
+  72              		.loc 2 772 22 view .LVU14
+  73              	.LBB9:
+ 773:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
+ 774:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   CLEAR_BIT(PWR->CR3, PWR_CR3_UCPD_DBDIS);
+  74              		.loc 2 774 3 view .LVU15
+  75 0028 044A     		ldr	r2, .L3+4
+  76 002a 9368     		ldr	r3, [r2, #8]
+  77 002c 23F48043 		bic	r3, r3, #16384
+  78 0030 9360     		str	r3, [r2, #8]
+  79              	.LBE9:
+  80              	.LBE8:
+  81:Src/stm32g4xx_hal_msp.c **** 
+  82:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN MspInit 1 */
+  83:Src/stm32g4xx_hal_msp.c **** 
+  84:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END MspInit 1 */
+  85:Src/stm32g4xx_hal_msp.c **** }
+  81              		.loc 1 85 1 is_stmt 0 view .LVU16
+  82 0032 02B0     		add	sp, sp, #8
+  83              	.LCFI1:
+  84              		.cfi_def_cfa_offset 0
+  85              		@ sp needed
+  86 0034 7047     		bx	lr
+  87              	.L4:
+  88 0036 00BF     		.align	2
+  89              	.L3:
+  90 0038 00100240 		.word	1073876992
+  91 003c 00700040 		.word	1073770496
+  92              		.cfi_endproc
+  93              	.LFE246:
+  95              		.section	.text.HAL_COMP_MspInit,"ax",%progbits
+  96              		.align	1
+  97              		.global	HAL_COMP_MspInit
+  98              		.syntax unified
+  99              		.thumb
+ 100              		.thumb_func
+ 101              		.fpu fpv4-sp-d16
+ 103              	HAL_COMP_MspInit:
+ 104              	.LVL0:
+ 105              	.LFB247:
+  86:Src/stm32g4xx_hal_msp.c **** 
+  87:Src/stm32g4xx_hal_msp.c **** /**
+  88:Src/stm32g4xx_hal_msp.c **** * @brief COMP MSP Initialization
+  89:Src/stm32g4xx_hal_msp.c **** * This function configures the hardware resources used in this example
+  90:Src/stm32g4xx_hal_msp.c **** * @param hcomp: COMP handle pointer
+  91:Src/stm32g4xx_hal_msp.c **** * @retval None
+  92:Src/stm32g4xx_hal_msp.c **** */
+  93:Src/stm32g4xx_hal_msp.c **** void HAL_COMP_MspInit(COMP_HandleTypeDef* hcomp)
+ARM GAS  /tmp/cc8HNt2i.s 			page 18
+
+
+  94:Src/stm32g4xx_hal_msp.c **** {
+ 106              		.loc 1 94 1 is_stmt 1 view -0
+ 107              		.cfi_startproc
+ 108              		@ args = 0, pretend = 0, frame = 24
+ 109              		@ frame_needed = 0, uses_anonymous_args = 0
+ 110              		.loc 1 94 1 is_stmt 0 view .LVU18
+ 111 0000 10B5     		push	{r4, lr}
+ 112              	.LCFI2:
+ 113              		.cfi_def_cfa_offset 8
+ 114              		.cfi_offset 4, -8
+ 115              		.cfi_offset 14, -4
+ 116 0002 86B0     		sub	sp, sp, #24
+ 117              	.LCFI3:
+ 118              		.cfi_def_cfa_offset 32
+  95:Src/stm32g4xx_hal_msp.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+ 119              		.loc 1 95 3 is_stmt 1 view .LVU19
+ 120              		.loc 1 95 20 is_stmt 0 view .LVU20
+ 121 0004 0023     		movs	r3, #0
+ 122 0006 0193     		str	r3, [sp, #4]
+ 123 0008 0293     		str	r3, [sp, #8]
+ 124 000a 0393     		str	r3, [sp, #12]
+ 125 000c 0493     		str	r3, [sp, #16]
+ 126 000e 0593     		str	r3, [sp, #20]
+  96:Src/stm32g4xx_hal_msp.c ****   if(hcomp->Instance==COMP1)
+ 127              		.loc 1 96 3 is_stmt 1 view .LVU21
+ 128              		.loc 1 96 11 is_stmt 0 view .LVU22
+ 129 0010 0268     		ldr	r2, [r0]
+ 130              		.loc 1 96 5 view .LVU23
+ 131 0012 03F18043 		add	r3, r3, #1073741824
+ 132 0016 03F58133 		add	r3, r3, #66048
+ 133 001a 9A42     		cmp	r2, r3
+ 134 001c 01D0     		beq	.L8
+ 135              	.LVL1:
+ 136              	.L5:
+  97:Src/stm32g4xx_hal_msp.c ****   {
+  98:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN COMP1_MspInit 0 */
+  99:Src/stm32g4xx_hal_msp.c **** 
+ 100:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END COMP1_MspInit 0 */
+ 101:Src/stm32g4xx_hal_msp.c **** 
+ 102:Src/stm32g4xx_hal_msp.c ****     __HAL_RCC_GPIOA_CLK_ENABLE();
+ 103:Src/stm32g4xx_hal_msp.c ****     /**COMP1 GPIO Configuration
+ 104:Src/stm32g4xx_hal_msp.c ****     PA1     ------> COMP1_INP
+ 105:Src/stm32g4xx_hal_msp.c ****     */
+ 106:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Pin = GPIO_PIN_1;
+ 107:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+ 108:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 109:Src/stm32g4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 110:Src/stm32g4xx_hal_msp.c **** 
+ 111:Src/stm32g4xx_hal_msp.c ****     /* COMP1 interrupt Init */
+ 112:Src/stm32g4xx_hal_msp.c ****     HAL_NVIC_SetPriority(COMP1_2_3_IRQn, 0, 0);
+ 113:Src/stm32g4xx_hal_msp.c ****     HAL_NVIC_EnableIRQ(COMP1_2_3_IRQn);
+ 114:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN COMP1_MspInit 1 */
+ 115:Src/stm32g4xx_hal_msp.c **** 
+ 116:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END COMP1_MspInit 1 */
+ 117:Src/stm32g4xx_hal_msp.c ****   }
+ 118:Src/stm32g4xx_hal_msp.c **** 
+ 119:Src/stm32g4xx_hal_msp.c **** }
+ARM GAS  /tmp/cc8HNt2i.s 			page 19
+
+
+ 137              		.loc 1 119 1 view .LVU24
+ 138 001e 06B0     		add	sp, sp, #24
+ 139              	.LCFI4:
+ 140              		.cfi_remember_state
+ 141              		.cfi_def_cfa_offset 8
+ 142              		@ sp needed
+ 143 0020 10BD     		pop	{r4, pc}
+ 144              	.LVL2:
+ 145              	.L8:
+ 146              	.LCFI5:
+ 147              		.cfi_restore_state
+ 102:Src/stm32g4xx_hal_msp.c ****     /**COMP1 GPIO Configuration
+ 148              		.loc 1 102 5 is_stmt 1 view .LVU25
+ 149              	.LBB10:
+ 102:Src/stm32g4xx_hal_msp.c ****     /**COMP1 GPIO Configuration
+ 150              		.loc 1 102 5 view .LVU26
+ 102:Src/stm32g4xx_hal_msp.c ****     /**COMP1 GPIO Configuration
+ 151              		.loc 1 102 5 view .LVU27
+ 152 0022 03F58733 		add	r3, r3, #69120
+ 153 0026 DA6C     		ldr	r2, [r3, #76]
+ 154 0028 42F00102 		orr	r2, r2, #1
+ 155 002c DA64     		str	r2, [r3, #76]
+ 102:Src/stm32g4xx_hal_msp.c ****     /**COMP1 GPIO Configuration
+ 156              		.loc 1 102 5 view .LVU28
+ 157 002e DB6C     		ldr	r3, [r3, #76]
+ 158 0030 03F00103 		and	r3, r3, #1
+ 159 0034 0093     		str	r3, [sp]
+ 102:Src/stm32g4xx_hal_msp.c ****     /**COMP1 GPIO Configuration
+ 160              		.loc 1 102 5 view .LVU29
+ 161 0036 009B     		ldr	r3, [sp]
+ 162              	.LBE10:
+ 102:Src/stm32g4xx_hal_msp.c ****     /**COMP1 GPIO Configuration
+ 163              		.loc 1 102 5 view .LVU30
+ 106:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+ 164              		.loc 1 106 5 view .LVU31
+ 106:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+ 165              		.loc 1 106 25 is_stmt 0 view .LVU32
+ 166 0038 0223     		movs	r3, #2
+ 167 003a 0193     		str	r3, [sp, #4]
+ 107:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 168              		.loc 1 107 5 is_stmt 1 view .LVU33
+ 107:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 169              		.loc 1 107 26 is_stmt 0 view .LVU34
+ 170 003c 0323     		movs	r3, #3
+ 171 003e 0293     		str	r3, [sp, #8]
+ 108:Src/stm32g4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 172              		.loc 1 108 5 is_stmt 1 view .LVU35
+ 108:Src/stm32g4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 173              		.loc 1 108 26 is_stmt 0 view .LVU36
+ 174 0040 0024     		movs	r4, #0
+ 175 0042 0394     		str	r4, [sp, #12]
+ 109:Src/stm32g4xx_hal_msp.c **** 
+ 176              		.loc 1 109 5 is_stmt 1 view .LVU37
+ 177 0044 01A9     		add	r1, sp, #4
+ 178 0046 4FF09040 		mov	r0, #1207959552
+ 179              	.LVL3:
+ 109:Src/stm32g4xx_hal_msp.c **** 
+ARM GAS  /tmp/cc8HNt2i.s 			page 20
+
+
+ 180              		.loc 1 109 5 is_stmt 0 view .LVU38
+ 181 004a FFF7FEFF 		bl	HAL_GPIO_Init
+ 182              	.LVL4:
+ 112:Src/stm32g4xx_hal_msp.c ****     HAL_NVIC_EnableIRQ(COMP1_2_3_IRQn);
+ 183              		.loc 1 112 5 is_stmt 1 view .LVU39
+ 184 004e 2246     		mov	r2, r4
+ 185 0050 2146     		mov	r1, r4
+ 186 0052 4020     		movs	r0, #64
+ 187 0054 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 188              	.LVL5:
+ 113:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN COMP1_MspInit 1 */
+ 189              		.loc 1 113 5 view .LVU40
+ 190 0058 4020     		movs	r0, #64
+ 191 005a FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 192              	.LVL6:
+ 193              		.loc 1 119 1 is_stmt 0 view .LVU41
+ 194 005e DEE7     		b	.L5
+ 195              		.cfi_endproc
+ 196              	.LFE247:
+ 198              		.section	.text.HAL_COMP_MspDeInit,"ax",%progbits
+ 199              		.align	1
+ 200              		.global	HAL_COMP_MspDeInit
+ 201              		.syntax unified
+ 202              		.thumb
+ 203              		.thumb_func
+ 204              		.fpu fpv4-sp-d16
+ 206              	HAL_COMP_MspDeInit:
+ 207              	.LVL7:
+ 208              	.LFB248:
+ 120:Src/stm32g4xx_hal_msp.c **** 
+ 121:Src/stm32g4xx_hal_msp.c **** /**
+ 122:Src/stm32g4xx_hal_msp.c **** * @brief COMP MSP De-Initialization
+ 123:Src/stm32g4xx_hal_msp.c **** * This function freeze the hardware resources used in this example
+ 124:Src/stm32g4xx_hal_msp.c **** * @param hcomp: COMP handle pointer
+ 125:Src/stm32g4xx_hal_msp.c **** * @retval None
+ 126:Src/stm32g4xx_hal_msp.c **** */
+ 127:Src/stm32g4xx_hal_msp.c **** void HAL_COMP_MspDeInit(COMP_HandleTypeDef* hcomp)
+ 128:Src/stm32g4xx_hal_msp.c **** {
+ 209              		.loc 1 128 1 is_stmt 1 view -0
+ 210              		.cfi_startproc
+ 211              		@ args = 0, pretend = 0, frame = 0
+ 212              		@ frame_needed = 0, uses_anonymous_args = 0
+ 213              		.loc 1 128 1 is_stmt 0 view .LVU43
+ 214 0000 08B5     		push	{r3, lr}
+ 215              	.LCFI6:
+ 216              		.cfi_def_cfa_offset 8
+ 217              		.cfi_offset 3, -8
+ 218              		.cfi_offset 14, -4
+ 129:Src/stm32g4xx_hal_msp.c ****   if(hcomp->Instance==COMP1)
+ 219              		.loc 1 129 3 is_stmt 1 view .LVU44
+ 220              		.loc 1 129 11 is_stmt 0 view .LVU45
+ 221 0002 0268     		ldr	r2, [r0]
+ 222              		.loc 1 129 5 view .LVU46
+ 223 0004 064B     		ldr	r3, .L13
+ 224 0006 9A42     		cmp	r2, r3
+ 225 0008 00D0     		beq	.L12
+ 226              	.LVL8:
+ARM GAS  /tmp/cc8HNt2i.s 			page 21
+
+
+ 227              	.L9:
+ 130:Src/stm32g4xx_hal_msp.c ****   {
+ 131:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN COMP1_MspDeInit 0 */
+ 132:Src/stm32g4xx_hal_msp.c **** 
+ 133:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END COMP1_MspDeInit 0 */
+ 134:Src/stm32g4xx_hal_msp.c **** 
+ 135:Src/stm32g4xx_hal_msp.c ****     /**COMP1 GPIO Configuration
+ 136:Src/stm32g4xx_hal_msp.c ****     PA1     ------> COMP1_INP
+ 137:Src/stm32g4xx_hal_msp.c ****     */
+ 138:Src/stm32g4xx_hal_msp.c ****     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_1);
+ 139:Src/stm32g4xx_hal_msp.c **** 
+ 140:Src/stm32g4xx_hal_msp.c ****     /* COMP1 interrupt DeInit */
+ 141:Src/stm32g4xx_hal_msp.c ****     HAL_NVIC_DisableIRQ(COMP1_2_3_IRQn);
+ 142:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN COMP1_MspDeInit 1 */
+ 143:Src/stm32g4xx_hal_msp.c **** 
+ 144:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END COMP1_MspDeInit 1 */
+ 145:Src/stm32g4xx_hal_msp.c ****   }
+ 146:Src/stm32g4xx_hal_msp.c **** 
+ 147:Src/stm32g4xx_hal_msp.c **** }
+ 228              		.loc 1 147 1 view .LVU47
+ 229 000a 08BD     		pop	{r3, pc}
+ 230              	.LVL9:
+ 231              	.L12:
+ 138:Src/stm32g4xx_hal_msp.c **** 
+ 232              		.loc 1 138 5 is_stmt 1 view .LVU48
+ 233 000c 0221     		movs	r1, #2
+ 234 000e 4FF09040 		mov	r0, #1207959552
+ 235              	.LVL10:
+ 138:Src/stm32g4xx_hal_msp.c **** 
+ 236              		.loc 1 138 5 is_stmt 0 view .LVU49
+ 237 0012 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 238              	.LVL11:
+ 141:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN COMP1_MspDeInit 1 */
+ 239              		.loc 1 141 5 is_stmt 1 view .LVU50
+ 240 0016 4020     		movs	r0, #64
+ 241 0018 FFF7FEFF 		bl	HAL_NVIC_DisableIRQ
+ 242              	.LVL12:
+ 243              		.loc 1 147 1 is_stmt 0 view .LVU51
+ 244 001c F5E7     		b	.L9
+ 245              	.L14:
+ 246 001e 00BF     		.align	2
+ 247              	.L13:
+ 248 0020 00020140 		.word	1073807872
+ 249              		.cfi_endproc
+ 250              	.LFE248:
+ 252              		.section	.text.HAL_DAC_MspInit,"ax",%progbits
+ 253              		.align	1
+ 254              		.global	HAL_DAC_MspInit
+ 255              		.syntax unified
+ 256              		.thumb
+ 257              		.thumb_func
+ 258              		.fpu fpv4-sp-d16
+ 260              	HAL_DAC_MspInit:
+ 261              	.LVL13:
+ 262              	.LFB249:
+ 148:Src/stm32g4xx_hal_msp.c **** 
+ 149:Src/stm32g4xx_hal_msp.c **** /**
+ARM GAS  /tmp/cc8HNt2i.s 			page 22
+
+
+ 150:Src/stm32g4xx_hal_msp.c **** * @brief DAC MSP Initialization
+ 151:Src/stm32g4xx_hal_msp.c **** * This function configures the hardware resources used in this example
+ 152:Src/stm32g4xx_hal_msp.c **** * @param hdac: DAC handle pointer
+ 153:Src/stm32g4xx_hal_msp.c **** * @retval None
+ 154:Src/stm32g4xx_hal_msp.c **** */
+ 155:Src/stm32g4xx_hal_msp.c **** void HAL_DAC_MspInit(DAC_HandleTypeDef* hdac)
+ 156:Src/stm32g4xx_hal_msp.c **** {
+ 263              		.loc 1 156 1 is_stmt 1 view -0
+ 264              		.cfi_startproc
+ 265              		@ args = 0, pretend = 0, frame = 32
+ 266              		@ frame_needed = 0, uses_anonymous_args = 0
+ 267              		.loc 1 156 1 is_stmt 0 view .LVU53
+ 268 0000 00B5     		push	{lr}
+ 269              	.LCFI7:
+ 270              		.cfi_def_cfa_offset 4
+ 271              		.cfi_offset 14, -4
+ 272 0002 89B0     		sub	sp, sp, #36
+ 273              	.LCFI8:
+ 274              		.cfi_def_cfa_offset 40
+ 157:Src/stm32g4xx_hal_msp.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+ 275              		.loc 1 157 3 is_stmt 1 view .LVU54
+ 276              		.loc 1 157 20 is_stmt 0 view .LVU55
+ 277 0004 0023     		movs	r3, #0
+ 278 0006 0393     		str	r3, [sp, #12]
+ 279 0008 0493     		str	r3, [sp, #16]
+ 280 000a 0593     		str	r3, [sp, #20]
+ 281 000c 0693     		str	r3, [sp, #24]
+ 282 000e 0793     		str	r3, [sp, #28]
+ 158:Src/stm32g4xx_hal_msp.c ****   if(hdac->Instance==DAC1)
+ 283              		.loc 1 158 3 is_stmt 1 view .LVU56
+ 284              		.loc 1 158 10 is_stmt 0 view .LVU57
+ 285 0010 0368     		ldr	r3, [r0]
+ 286              		.loc 1 158 5 view .LVU58
+ 287 0012 194A     		ldr	r2, .L21
+ 288 0014 9342     		cmp	r3, r2
+ 289 0016 05D0     		beq	.L19
+ 159:Src/stm32g4xx_hal_msp.c ****   {
+ 160:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN DAC1_MspInit 0 */
+ 161:Src/stm32g4xx_hal_msp.c **** 
+ 162:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END DAC1_MspInit 0 */
+ 163:Src/stm32g4xx_hal_msp.c ****     /* Peripheral clock enable */
+ 164:Src/stm32g4xx_hal_msp.c ****     __HAL_RCC_DAC1_CLK_ENABLE();
+ 165:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN DAC1_MspInit 1 */
+ 166:Src/stm32g4xx_hal_msp.c **** 
+ 167:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END DAC1_MspInit 1 */
+ 168:Src/stm32g4xx_hal_msp.c ****   }
+ 169:Src/stm32g4xx_hal_msp.c ****   else if(hdac->Instance==DAC2)
+ 290              		.loc 1 169 8 is_stmt 1 view .LVU59
+ 291              		.loc 1 169 10 is_stmt 0 view .LVU60
+ 292 0018 184A     		ldr	r2, .L21+4
+ 293 001a 9342     		cmp	r3, r2
+ 294 001c 0DD0     		beq	.L20
+ 295              	.LVL14:
+ 296              	.L15:
+ 170:Src/stm32g4xx_hal_msp.c ****   {
+ 171:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN DAC2_MspInit 0 */
+ 172:Src/stm32g4xx_hal_msp.c **** 
+ARM GAS  /tmp/cc8HNt2i.s 			page 23
+
+
+ 173:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END DAC2_MspInit 0 */
+ 174:Src/stm32g4xx_hal_msp.c ****     /* Peripheral clock enable */
+ 175:Src/stm32g4xx_hal_msp.c ****     __HAL_RCC_DAC2_CLK_ENABLE();
+ 176:Src/stm32g4xx_hal_msp.c **** 
+ 177:Src/stm32g4xx_hal_msp.c ****     __HAL_RCC_GPIOA_CLK_ENABLE();
+ 178:Src/stm32g4xx_hal_msp.c ****     /**DAC2 GPIO Configuration
+ 179:Src/stm32g4xx_hal_msp.c ****     PA6     ------> DAC2_OUT1
+ 180:Src/stm32g4xx_hal_msp.c ****     */
+ 181:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Pin = GPIO_PIN_6;
+ 182:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+ 183:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 184:Src/stm32g4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 185:Src/stm32g4xx_hal_msp.c **** 
+ 186:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN DAC2_MspInit 1 */
+ 187:Src/stm32g4xx_hal_msp.c **** 
+ 188:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END DAC2_MspInit 1 */
+ 189:Src/stm32g4xx_hal_msp.c ****   }
+ 190:Src/stm32g4xx_hal_msp.c **** 
+ 191:Src/stm32g4xx_hal_msp.c **** }
+ 297              		.loc 1 191 1 view .LVU61
+ 298 001e 09B0     		add	sp, sp, #36
+ 299              	.LCFI9:
+ 300              		.cfi_remember_state
+ 301              		.cfi_def_cfa_offset 4
+ 302              		@ sp needed
+ 303 0020 5DF804FB 		ldr	pc, [sp], #4
+ 304              	.LVL15:
+ 305              	.L19:
+ 306              	.LCFI10:
+ 307              		.cfi_restore_state
+ 164:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN DAC1_MspInit 1 */
+ 308              		.loc 1 164 5 is_stmt 1 view .LVU62
+ 309              	.LBB11:
+ 164:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN DAC1_MspInit 1 */
+ 310              		.loc 1 164 5 view .LVU63
+ 164:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN DAC1_MspInit 1 */
+ 311              		.loc 1 164 5 view .LVU64
+ 312 0024 164B     		ldr	r3, .L21+8
+ 313 0026 DA6C     		ldr	r2, [r3, #76]
+ 314 0028 42F48032 		orr	r2, r2, #65536
+ 315 002c DA64     		str	r2, [r3, #76]
+ 164:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN DAC1_MspInit 1 */
+ 316              		.loc 1 164 5 view .LVU65
+ 317 002e DB6C     		ldr	r3, [r3, #76]
+ 318 0030 03F48033 		and	r3, r3, #65536
+ 319 0034 0093     		str	r3, [sp]
+ 164:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN DAC1_MspInit 1 */
+ 320              		.loc 1 164 5 view .LVU66
+ 321 0036 009B     		ldr	r3, [sp]
+ 322              	.LBE11:
+ 164:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN DAC1_MspInit 1 */
+ 323              		.loc 1 164 5 view .LVU67
+ 324 0038 F1E7     		b	.L15
+ 325              	.L20:
+ 175:Src/stm32g4xx_hal_msp.c **** 
+ 326              		.loc 1 175 5 view .LVU68
+ 327              	.LBB12:
+ARM GAS  /tmp/cc8HNt2i.s 			page 24
+
+
+ 175:Src/stm32g4xx_hal_msp.c **** 
+ 328              		.loc 1 175 5 view .LVU69
+ 175:Src/stm32g4xx_hal_msp.c **** 
+ 329              		.loc 1 175 5 view .LVU70
+ 330 003a 114B     		ldr	r3, .L21+8
+ 331 003c DA6C     		ldr	r2, [r3, #76]
+ 332 003e 42F40032 		orr	r2, r2, #131072
+ 333 0042 DA64     		str	r2, [r3, #76]
+ 175:Src/stm32g4xx_hal_msp.c **** 
+ 334              		.loc 1 175 5 view .LVU71
+ 335 0044 DA6C     		ldr	r2, [r3, #76]
+ 336 0046 02F40032 		and	r2, r2, #131072
+ 337 004a 0192     		str	r2, [sp, #4]
+ 175:Src/stm32g4xx_hal_msp.c **** 
+ 338              		.loc 1 175 5 view .LVU72
+ 339 004c 019A     		ldr	r2, [sp, #4]
+ 340              	.LBE12:
+ 175:Src/stm32g4xx_hal_msp.c **** 
+ 341              		.loc 1 175 5 view .LVU73
+ 177:Src/stm32g4xx_hal_msp.c ****     /**DAC2 GPIO Configuration
+ 342              		.loc 1 177 5 view .LVU74
+ 343              	.LBB13:
+ 177:Src/stm32g4xx_hal_msp.c ****     /**DAC2 GPIO Configuration
+ 344              		.loc 1 177 5 view .LVU75
+ 177:Src/stm32g4xx_hal_msp.c ****     /**DAC2 GPIO Configuration
+ 345              		.loc 1 177 5 view .LVU76
+ 346 004e DA6C     		ldr	r2, [r3, #76]
+ 347 0050 42F00102 		orr	r2, r2, #1
+ 348 0054 DA64     		str	r2, [r3, #76]
+ 177:Src/stm32g4xx_hal_msp.c ****     /**DAC2 GPIO Configuration
+ 349              		.loc 1 177 5 view .LVU77
+ 350 0056 DB6C     		ldr	r3, [r3, #76]
+ 351 0058 03F00103 		and	r3, r3, #1
+ 352 005c 0293     		str	r3, [sp, #8]
+ 177:Src/stm32g4xx_hal_msp.c ****     /**DAC2 GPIO Configuration
+ 353              		.loc 1 177 5 view .LVU78
+ 354 005e 029B     		ldr	r3, [sp, #8]
+ 355              	.LBE13:
+ 177:Src/stm32g4xx_hal_msp.c ****     /**DAC2 GPIO Configuration
+ 356              		.loc 1 177 5 view .LVU79
+ 181:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+ 357              		.loc 1 181 5 view .LVU80
+ 181:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+ 358              		.loc 1 181 25 is_stmt 0 view .LVU81
+ 359 0060 4023     		movs	r3, #64
+ 360 0062 0393     		str	r3, [sp, #12]
+ 182:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 361              		.loc 1 182 5 is_stmt 1 view .LVU82
+ 182:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 362              		.loc 1 182 26 is_stmt 0 view .LVU83
+ 363 0064 0323     		movs	r3, #3
+ 364 0066 0493     		str	r3, [sp, #16]
+ 183:Src/stm32g4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 365              		.loc 1 183 5 is_stmt 1 view .LVU84
+ 183:Src/stm32g4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 366              		.loc 1 183 26 is_stmt 0 view .LVU85
+ 367 0068 0023     		movs	r3, #0
+ARM GAS  /tmp/cc8HNt2i.s 			page 25
+
+
+ 368 006a 0593     		str	r3, [sp, #20]
+ 184:Src/stm32g4xx_hal_msp.c **** 
+ 369              		.loc 1 184 5 is_stmt 1 view .LVU86
+ 370 006c 03A9     		add	r1, sp, #12
+ 371 006e 4FF09040 		mov	r0, #1207959552
+ 372              	.LVL16:
+ 184:Src/stm32g4xx_hal_msp.c **** 
+ 373              		.loc 1 184 5 is_stmt 0 view .LVU87
+ 374 0072 FFF7FEFF 		bl	HAL_GPIO_Init
+ 375              	.LVL17:
+ 376              		.loc 1 191 1 view .LVU88
+ 377 0076 D2E7     		b	.L15
+ 378              	.L22:
+ 379              		.align	2
+ 380              	.L21:
+ 381 0078 00080050 		.word	1342179328
+ 382 007c 000C0050 		.word	1342180352
+ 383 0080 00100240 		.word	1073876992
+ 384              		.cfi_endproc
+ 385              	.LFE249:
+ 387              		.section	.text.HAL_DAC_MspDeInit,"ax",%progbits
+ 388              		.align	1
+ 389              		.global	HAL_DAC_MspDeInit
+ 390              		.syntax unified
+ 391              		.thumb
+ 392              		.thumb_func
+ 393              		.fpu fpv4-sp-d16
+ 395              	HAL_DAC_MspDeInit:
+ 396              	.LVL18:
+ 397              	.LFB250:
+ 192:Src/stm32g4xx_hal_msp.c **** 
+ 193:Src/stm32g4xx_hal_msp.c **** /**
+ 194:Src/stm32g4xx_hal_msp.c **** * @brief DAC MSP De-Initialization
+ 195:Src/stm32g4xx_hal_msp.c **** * This function freeze the hardware resources used in this example
+ 196:Src/stm32g4xx_hal_msp.c **** * @param hdac: DAC handle pointer
+ 197:Src/stm32g4xx_hal_msp.c **** * @retval None
+ 198:Src/stm32g4xx_hal_msp.c **** */
+ 199:Src/stm32g4xx_hal_msp.c **** void HAL_DAC_MspDeInit(DAC_HandleTypeDef* hdac)
+ 200:Src/stm32g4xx_hal_msp.c **** {
+ 398              		.loc 1 200 1 is_stmt 1 view -0
+ 399              		.cfi_startproc
+ 400              		@ args = 0, pretend = 0, frame = 0
+ 401              		@ frame_needed = 0, uses_anonymous_args = 0
+ 402              		.loc 1 200 1 is_stmt 0 view .LVU90
+ 403 0000 08B5     		push	{r3, lr}
+ 404              	.LCFI11:
+ 405              		.cfi_def_cfa_offset 8
+ 406              		.cfi_offset 3, -8
+ 407              		.cfi_offset 14, -4
+ 201:Src/stm32g4xx_hal_msp.c ****   if(hdac->Instance==DAC1)
+ 408              		.loc 1 201 3 is_stmt 1 view .LVU91
+ 409              		.loc 1 201 10 is_stmt 0 view .LVU92
+ 410 0002 0368     		ldr	r3, [r0]
+ 411              		.loc 1 201 5 view .LVU93
+ 412 0004 0E4A     		ldr	r2, .L29
+ 413 0006 9342     		cmp	r3, r2
+ 414 0008 03D0     		beq	.L27
+ARM GAS  /tmp/cc8HNt2i.s 			page 26
+
+
+ 202:Src/stm32g4xx_hal_msp.c ****   {
+ 203:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN DAC1_MspDeInit 0 */
+ 204:Src/stm32g4xx_hal_msp.c **** 
+ 205:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END DAC1_MspDeInit 0 */
+ 206:Src/stm32g4xx_hal_msp.c ****     /* Peripheral clock disable */
+ 207:Src/stm32g4xx_hal_msp.c ****     __HAL_RCC_DAC1_CLK_DISABLE();
+ 208:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN DAC1_MspDeInit 1 */
+ 209:Src/stm32g4xx_hal_msp.c **** 
+ 210:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END DAC1_MspDeInit 1 */
+ 211:Src/stm32g4xx_hal_msp.c ****   }
+ 212:Src/stm32g4xx_hal_msp.c ****   else if(hdac->Instance==DAC2)
+ 415              		.loc 1 212 8 is_stmt 1 view .LVU94
+ 416              		.loc 1 212 10 is_stmt 0 view .LVU95
+ 417 000a 0E4A     		ldr	r2, .L29+4
+ 418 000c 9342     		cmp	r3, r2
+ 419 000e 09D0     		beq	.L28
+ 420              	.LVL19:
+ 421              	.L23:
+ 213:Src/stm32g4xx_hal_msp.c ****   {
+ 214:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN DAC2_MspDeInit 0 */
+ 215:Src/stm32g4xx_hal_msp.c **** 
+ 216:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END DAC2_MspDeInit 0 */
+ 217:Src/stm32g4xx_hal_msp.c ****     /* Peripheral clock disable */
+ 218:Src/stm32g4xx_hal_msp.c ****     __HAL_RCC_DAC2_CLK_DISABLE();
+ 219:Src/stm32g4xx_hal_msp.c **** 
+ 220:Src/stm32g4xx_hal_msp.c ****     /**DAC2 GPIO Configuration
+ 221:Src/stm32g4xx_hal_msp.c ****     PA6     ------> DAC2_OUT1
+ 222:Src/stm32g4xx_hal_msp.c ****     */
+ 223:Src/stm32g4xx_hal_msp.c ****     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_6);
+ 224:Src/stm32g4xx_hal_msp.c **** 
+ 225:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN DAC2_MspDeInit 1 */
+ 226:Src/stm32g4xx_hal_msp.c **** 
+ 227:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END DAC2_MspDeInit 1 */
+ 228:Src/stm32g4xx_hal_msp.c ****   }
+ 229:Src/stm32g4xx_hal_msp.c **** 
+ 230:Src/stm32g4xx_hal_msp.c **** }
+ 422              		.loc 1 230 1 view .LVU96
+ 423 0010 08BD     		pop	{r3, pc}
+ 424              	.LVL20:
+ 425              	.L27:
+ 207:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN DAC1_MspDeInit 1 */
+ 426              		.loc 1 207 5 is_stmt 1 view .LVU97
+ 427 0012 02F17042 		add	r2, r2, #-268435456
+ 428 0016 02F50232 		add	r2, r2, #133120
+ 429 001a D36C     		ldr	r3, [r2, #76]
+ 430 001c 23F48033 		bic	r3, r3, #65536
+ 431 0020 D364     		str	r3, [r2, #76]
+ 432 0022 F5E7     		b	.L23
+ 433              	.L28:
+ 218:Src/stm32g4xx_hal_msp.c **** 
+ 434              		.loc 1 218 5 view .LVU98
+ 435 0024 02F17042 		add	r2, r2, #-268435456
+ 436 0028 02F50132 		add	r2, r2, #132096
+ 437 002c D36C     		ldr	r3, [r2, #76]
+ 438 002e 23F40033 		bic	r3, r3, #131072
+ 439 0032 D364     		str	r3, [r2, #76]
+ 223:Src/stm32g4xx_hal_msp.c **** 
+ARM GAS  /tmp/cc8HNt2i.s 			page 27
+
+
+ 440              		.loc 1 223 5 view .LVU99
+ 441 0034 4021     		movs	r1, #64
+ 442 0036 4FF09040 		mov	r0, #1207959552
+ 443              	.LVL21:
+ 223:Src/stm32g4xx_hal_msp.c **** 
+ 444              		.loc 1 223 5 is_stmt 0 view .LVU100
+ 445 003a FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 446              	.LVL22:
+ 447              		.loc 1 230 1 view .LVU101
+ 448 003e E7E7     		b	.L23
+ 449              	.L30:
+ 450              		.align	2
+ 451              	.L29:
+ 452 0040 00080050 		.word	1342179328
+ 453 0044 000C0050 		.word	1342180352
+ 454              		.cfi_endproc
+ 455              	.LFE250:
+ 457              		.section	.text.HAL_HRTIM_MspInit,"ax",%progbits
+ 458              		.align	1
+ 459              		.global	HAL_HRTIM_MspInit
+ 460              		.syntax unified
+ 461              		.thumb
+ 462              		.thumb_func
+ 463              		.fpu fpv4-sp-d16
+ 465              	HAL_HRTIM_MspInit:
+ 466              	.LVL23:
+ 467              	.LFB251:
+ 231:Src/stm32g4xx_hal_msp.c **** 
+ 232:Src/stm32g4xx_hal_msp.c **** /**
+ 233:Src/stm32g4xx_hal_msp.c **** * @brief HRTIM MSP Initialization
+ 234:Src/stm32g4xx_hal_msp.c **** * This function configures the hardware resources used in this example
+ 235:Src/stm32g4xx_hal_msp.c **** * @param hhrtim: HRTIM handle pointer
+ 236:Src/stm32g4xx_hal_msp.c **** * @retval None
+ 237:Src/stm32g4xx_hal_msp.c **** */
+ 238:Src/stm32g4xx_hal_msp.c **** void HAL_HRTIM_MspInit(HRTIM_HandleTypeDef* hhrtim)
+ 239:Src/stm32g4xx_hal_msp.c **** {
+ 468              		.loc 1 239 1 is_stmt 1 view -0
+ 469              		.cfi_startproc
+ 470              		@ args = 0, pretend = 0, frame = 8
+ 471              		@ frame_needed = 0, uses_anonymous_args = 0
+ 240:Src/stm32g4xx_hal_msp.c ****   if(hhrtim->Instance==HRTIM1)
+ 472              		.loc 1 240 3 view .LVU103
+ 473              		.loc 1 240 12 is_stmt 0 view .LVU104
+ 474 0000 0268     		ldr	r2, [r0]
+ 475              		.loc 1 240 5 view .LVU105
+ 476 0002 194B     		ldr	r3, .L40
+ 477 0004 9A42     		cmp	r2, r3
+ 478 0006 00D0     		beq	.L38
+ 479 0008 7047     		bx	lr
+ 480              	.L38:
+ 239:Src/stm32g4xx_hal_msp.c ****   if(hhrtim->Instance==HRTIM1)
+ 481              		.loc 1 239 1 view .LVU106
+ 482 000a 10B5     		push	{r4, lr}
+ 483              	.LCFI12:
+ 484              		.cfi_def_cfa_offset 8
+ 485              		.cfi_offset 4, -8
+ 486              		.cfi_offset 14, -4
+ARM GAS  /tmp/cc8HNt2i.s 			page 28
+
+
+ 487 000c 82B0     		sub	sp, sp, #8
+ 488              	.LCFI13:
+ 489              		.cfi_def_cfa_offset 16
+ 490 000e 0446     		mov	r4, r0
+ 241:Src/stm32g4xx_hal_msp.c ****   {
+ 242:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN HRTIM1_MspInit 0 */
+ 243:Src/stm32g4xx_hal_msp.c **** 
+ 244:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END HRTIM1_MspInit 0 */
+ 245:Src/stm32g4xx_hal_msp.c ****     /* Peripheral clock enable */
+ 246:Src/stm32g4xx_hal_msp.c ****     __HAL_RCC_HRTIM1_CLK_ENABLE();
+ 491              		.loc 1 246 5 is_stmt 1 view .LVU107
+ 492              	.LBB14:
+ 493              		.loc 1 246 5 view .LVU108
+ 494              		.loc 1 246 5 view .LVU109
+ 495 0010 03F52843 		add	r3, r3, #43008
+ 496 0014 1A6E     		ldr	r2, [r3, #96]
+ 497 0016 42F08062 		orr	r2, r2, #67108864
+ 498 001a 1A66     		str	r2, [r3, #96]
+ 499              		.loc 1 246 5 view .LVU110
+ 500 001c 1B6E     		ldr	r3, [r3, #96]
+ 501 001e 03F08063 		and	r3, r3, #67108864
+ 502 0022 0193     		str	r3, [sp, #4]
+ 503              		.loc 1 246 5 view .LVU111
+ 504 0024 019B     		ldr	r3, [sp, #4]
+ 505              	.LBE14:
+ 506              		.loc 1 246 5 view .LVU112
+ 247:Src/stm32g4xx_hal_msp.c **** 
+ 248:Src/stm32g4xx_hal_msp.c ****     /* HRTIM1 DMA Init */
+ 249:Src/stm32g4xx_hal_msp.c ****     /* HRTIM1_A Init */
+ 250:Src/stm32g4xx_hal_msp.c ****     hdma_hrtim1_a.Instance = DMA1_Channel1;
+ 507              		.loc 1 250 5 view .LVU113
+ 508              		.loc 1 250 28 is_stmt 0 view .LVU114
+ 509 0026 1148     		ldr	r0, .L40+4
+ 510              	.LVL24:
+ 511              		.loc 1 250 28 view .LVU115
+ 512 0028 114B     		ldr	r3, .L40+8
+ 513 002a 0360     		str	r3, [r0]
+ 251:Src/stm32g4xx_hal_msp.c ****     hdma_hrtim1_a.Init.Request = DMA_REQUEST_HRTIM1_A;
+ 514              		.loc 1 251 5 is_stmt 1 view .LVU116
+ 515              		.loc 1 251 32 is_stmt 0 view .LVU117
+ 516 002c 6023     		movs	r3, #96
+ 517 002e 4360     		str	r3, [r0, #4]
+ 252:Src/stm32g4xx_hal_msp.c ****     hdma_hrtim1_a.Init.Direction = DMA_PERIPH_TO_MEMORY;
+ 518              		.loc 1 252 5 is_stmt 1 view .LVU118
+ 519              		.loc 1 252 34 is_stmt 0 view .LVU119
+ 520 0030 0023     		movs	r3, #0
+ 521 0032 8360     		str	r3, [r0, #8]
+ 253:Src/stm32g4xx_hal_msp.c ****     hdma_hrtim1_a.Init.PeriphInc = DMA_PINC_DISABLE;
+ 522              		.loc 1 253 5 is_stmt 1 view .LVU120
+ 523              		.loc 1 253 34 is_stmt 0 view .LVU121
+ 524 0034 C360     		str	r3, [r0, #12]
+ 254:Src/stm32g4xx_hal_msp.c ****     hdma_hrtim1_a.Init.MemInc = DMA_MINC_ENABLE;
+ 525              		.loc 1 254 5 is_stmt 1 view .LVU122
+ 526              		.loc 1 254 31 is_stmt 0 view .LVU123
+ 527 0036 8022     		movs	r2, #128
+ 528 0038 0261     		str	r2, [r0, #16]
+ 255:Src/stm32g4xx_hal_msp.c ****     hdma_hrtim1_a.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
+ARM GAS  /tmp/cc8HNt2i.s 			page 29
+
+
+ 529              		.loc 1 255 5 is_stmt 1 view .LVU124
+ 530              		.loc 1 255 44 is_stmt 0 view .LVU125
+ 531 003a 4FF48072 		mov	r2, #256
+ 532 003e 4261     		str	r2, [r0, #20]
+ 256:Src/stm32g4xx_hal_msp.c ****     hdma_hrtim1_a.Init.MemDataAlignment = DMA_MDATAALIGN_HALFWORD;
+ 533              		.loc 1 256 5 is_stmt 1 view .LVU126
+ 534              		.loc 1 256 41 is_stmt 0 view .LVU127
+ 535 0040 4FF48062 		mov	r2, #1024
+ 536 0044 8261     		str	r2, [r0, #24]
+ 257:Src/stm32g4xx_hal_msp.c ****     hdma_hrtim1_a.Init.Mode = DMA_NORMAL;
+ 537              		.loc 1 257 5 is_stmt 1 view .LVU128
+ 538              		.loc 1 257 29 is_stmt 0 view .LVU129
+ 539 0046 C361     		str	r3, [r0, #28]
+ 258:Src/stm32g4xx_hal_msp.c ****     hdma_hrtim1_a.Init.Priority = DMA_PRIORITY_VERY_HIGH;
+ 540              		.loc 1 258 5 is_stmt 1 view .LVU130
+ 541              		.loc 1 258 33 is_stmt 0 view .LVU131
+ 542 0048 4FF44053 		mov	r3, #12288
+ 543 004c 0362     		str	r3, [r0, #32]
+ 259:Src/stm32g4xx_hal_msp.c ****     if (HAL_DMA_Init(&hdma_hrtim1_a) != HAL_OK)
+ 544              		.loc 1 259 5 is_stmt 1 view .LVU132
+ 545              		.loc 1 259 9 is_stmt 0 view .LVU133
+ 546 004e FFF7FEFF 		bl	HAL_DMA_Init
+ 547              	.LVL25:
+ 548              		.loc 1 259 8 view .LVU134
+ 549 0052 28B9     		cbnz	r0, .L39
+ 550              	.L33:
+ 260:Src/stm32g4xx_hal_msp.c ****     {
+ 261:Src/stm32g4xx_hal_msp.c ****       Error_Handler();
+ 262:Src/stm32g4xx_hal_msp.c ****     }
+ 263:Src/stm32g4xx_hal_msp.c **** 
+ 264:Src/stm32g4xx_hal_msp.c ****     __HAL_LINKDMA(hhrtim,hdmaTimerA,hdma_hrtim1_a);
+ 551              		.loc 1 264 5 is_stmt 1 view .LVU135
+ 552              		.loc 1 264 5 view .LVU136
+ 553 0054 054B     		ldr	r3, .L40+4
+ 554 0056 C4F8E430 		str	r3, [r4, #228]
+ 555              		.loc 1 264 5 view .LVU137
+ 556 005a 9C62     		str	r4, [r3, #40]
+ 557              		.loc 1 264 5 view .LVU138
+ 265:Src/stm32g4xx_hal_msp.c **** 
+ 266:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN HRTIM1_MspInit 1 */
+ 267:Src/stm32g4xx_hal_msp.c **** 
+ 268:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END HRTIM1_MspInit 1 */
+ 269:Src/stm32g4xx_hal_msp.c ****   }
+ 270:Src/stm32g4xx_hal_msp.c **** 
+ 271:Src/stm32g4xx_hal_msp.c **** }
+ 558              		.loc 1 271 1 is_stmt 0 view .LVU139
+ 559 005c 02B0     		add	sp, sp, #8
+ 560              	.LCFI14:
+ 561              		.cfi_remember_state
+ 562              		.cfi_def_cfa_offset 8
+ 563              		@ sp needed
+ 564 005e 10BD     		pop	{r4, pc}
+ 565              	.LVL26:
+ 566              	.L39:
+ 567              	.LCFI15:
+ 568              		.cfi_restore_state
+ 261:Src/stm32g4xx_hal_msp.c ****     }
+ARM GAS  /tmp/cc8HNt2i.s 			page 30
+
+
+ 569              		.loc 1 261 7 is_stmt 1 view .LVU140
+ 570 0060 FFF7FEFF 		bl	Error_Handler
+ 571              	.LVL27:
+ 572 0064 F6E7     		b	.L33
+ 573              	.L41:
+ 574 0066 00BF     		.align	2
+ 575              	.L40:
+ 576 0068 00680140 		.word	1073833984
+ 577 006c 00000000 		.word	hdma_hrtim1_a
+ 578 0070 08000240 		.word	1073872904
+ 579              		.cfi_endproc
+ 580              	.LFE251:
+ 582              		.section	.text.HAL_HRTIM_MspPostInit,"ax",%progbits
+ 583              		.align	1
+ 584              		.global	HAL_HRTIM_MspPostInit
+ 585              		.syntax unified
+ 586              		.thumb
+ 587              		.thumb_func
+ 588              		.fpu fpv4-sp-d16
+ 590              	HAL_HRTIM_MspPostInit:
+ 591              	.LVL28:
+ 592              	.LFB252:
+ 272:Src/stm32g4xx_hal_msp.c **** 
+ 273:Src/stm32g4xx_hal_msp.c **** void HAL_HRTIM_MspPostInit(HRTIM_HandleTypeDef* hhrtim)
+ 274:Src/stm32g4xx_hal_msp.c **** {
+ 593              		.loc 1 274 1 view -0
+ 594              		.cfi_startproc
+ 595              		@ args = 0, pretend = 0, frame = 32
+ 596              		@ frame_needed = 0, uses_anonymous_args = 0
+ 597              		.loc 1 274 1 is_stmt 0 view .LVU142
+ 598 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 599              	.LCFI16:
+ 600              		.cfi_def_cfa_offset 20
+ 601              		.cfi_offset 4, -20
+ 602              		.cfi_offset 5, -16
+ 603              		.cfi_offset 6, -12
+ 604              		.cfi_offset 7, -8
+ 605              		.cfi_offset 14, -4
+ 606 0002 89B0     		sub	sp, sp, #36
+ 607              	.LCFI17:
+ 608              		.cfi_def_cfa_offset 56
+ 275:Src/stm32g4xx_hal_msp.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+ 609              		.loc 1 275 3 is_stmt 1 view .LVU143
+ 610              		.loc 1 275 20 is_stmt 0 view .LVU144
+ 611 0004 0023     		movs	r3, #0
+ 612 0006 0393     		str	r3, [sp, #12]
+ 613 0008 0493     		str	r3, [sp, #16]
+ 614 000a 0593     		str	r3, [sp, #20]
+ 615 000c 0693     		str	r3, [sp, #24]
+ 616 000e 0793     		str	r3, [sp, #28]
+ 276:Src/stm32g4xx_hal_msp.c ****   if(hhrtim->Instance==HRTIM1)
+ 617              		.loc 1 276 3 is_stmt 1 view .LVU145
+ 618              		.loc 1 276 12 is_stmt 0 view .LVU146
+ 619 0010 0268     		ldr	r2, [r0]
+ 620              		.loc 1 276 5 view .LVU147
+ 621 0012 1A4B     		ldr	r3, .L46
+ 622 0014 9A42     		cmp	r2, r3
+ARM GAS  /tmp/cc8HNt2i.s 			page 31
+
+
+ 623 0016 01D0     		beq	.L45
+ 624              	.LVL29:
+ 625              	.L42:
+ 277:Src/stm32g4xx_hal_msp.c ****   {
+ 278:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN HRTIM1_MspPostInit 0 */
+ 279:Src/stm32g4xx_hal_msp.c **** 
+ 280:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END HRTIM1_MspPostInit 0 */
+ 281:Src/stm32g4xx_hal_msp.c **** 
+ 282:Src/stm32g4xx_hal_msp.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
+ 283:Src/stm32g4xx_hal_msp.c ****     __HAL_RCC_GPIOA_CLK_ENABLE();
+ 284:Src/stm32g4xx_hal_msp.c ****     /**HRTIM1 GPIO Configuration
+ 285:Src/stm32g4xx_hal_msp.c ****     PB12     ------> HRTIM1_CHC1
+ 286:Src/stm32g4xx_hal_msp.c ****     PB13     ------> HRTIM1_CHC2
+ 287:Src/stm32g4xx_hal_msp.c ****     PB14     ------> HRTIM1_CHD1
+ 288:Src/stm32g4xx_hal_msp.c ****     PB15     ------> HRTIM1_CHD2
+ 289:Src/stm32g4xx_hal_msp.c ****     PA8     ------> HRTIM1_CHA1
+ 290:Src/stm32g4xx_hal_msp.c ****     PA9     ------> HRTIM1_CHA2
+ 291:Src/stm32g4xx_hal_msp.c ****     PA10     ------> HRTIM1_CHB1
+ 292:Src/stm32g4xx_hal_msp.c ****     */
+ 293:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Pin = GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15;
+ 294:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 295:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 296:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 297:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF13_HRTIM1;
+ 298:Src/stm32g4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 299:Src/stm32g4xx_hal_msp.c **** 
+ 300:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10;
+ 301:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 302:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 303:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 304:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF13_HRTIM1;
+ 305:Src/stm32g4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 306:Src/stm32g4xx_hal_msp.c **** 
+ 307:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN HRTIM1_MspPostInit 1 */
+ 308:Src/stm32g4xx_hal_msp.c **** 
+ 309:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END HRTIM1_MspPostInit 1 */
+ 310:Src/stm32g4xx_hal_msp.c ****   }
+ 311:Src/stm32g4xx_hal_msp.c **** 
+ 312:Src/stm32g4xx_hal_msp.c **** }
+ 626              		.loc 1 312 1 view .LVU148
+ 627 0018 09B0     		add	sp, sp, #36
+ 628              	.LCFI18:
+ 629              		.cfi_remember_state
+ 630              		.cfi_def_cfa_offset 20
+ 631              		@ sp needed
+ 632 001a F0BD     		pop	{r4, r5, r6, r7, pc}
+ 633              	.LVL30:
+ 634              	.L45:
+ 635              	.LCFI19:
+ 636              		.cfi_restore_state
+ 282:Src/stm32g4xx_hal_msp.c ****     __HAL_RCC_GPIOA_CLK_ENABLE();
+ 637              		.loc 1 282 5 is_stmt 1 view .LVU149
+ 638              	.LBB15:
+ 282:Src/stm32g4xx_hal_msp.c ****     __HAL_RCC_GPIOA_CLK_ENABLE();
+ 639              		.loc 1 282 5 view .LVU150
+ 282:Src/stm32g4xx_hal_msp.c ****     __HAL_RCC_GPIOA_CLK_ENABLE();
+ 640              		.loc 1 282 5 view .LVU151
+ARM GAS  /tmp/cc8HNt2i.s 			page 32
+
+
+ 641 001c 03F52843 		add	r3, r3, #43008
+ 642 0020 DA6C     		ldr	r2, [r3, #76]
+ 643 0022 42F00202 		orr	r2, r2, #2
+ 644 0026 DA64     		str	r2, [r3, #76]
+ 282:Src/stm32g4xx_hal_msp.c ****     __HAL_RCC_GPIOA_CLK_ENABLE();
+ 645              		.loc 1 282 5 view .LVU152
+ 646 0028 DA6C     		ldr	r2, [r3, #76]
+ 647 002a 02F00202 		and	r2, r2, #2
+ 648 002e 0192     		str	r2, [sp, #4]
+ 282:Src/stm32g4xx_hal_msp.c ****     __HAL_RCC_GPIOA_CLK_ENABLE();
+ 649              		.loc 1 282 5 view .LVU153
+ 650 0030 019A     		ldr	r2, [sp, #4]
+ 651              	.LBE15:
+ 282:Src/stm32g4xx_hal_msp.c ****     __HAL_RCC_GPIOA_CLK_ENABLE();
+ 652              		.loc 1 282 5 view .LVU154
+ 283:Src/stm32g4xx_hal_msp.c ****     /**HRTIM1 GPIO Configuration
+ 653              		.loc 1 283 5 view .LVU155
+ 654              	.LBB16:
+ 283:Src/stm32g4xx_hal_msp.c ****     /**HRTIM1 GPIO Configuration
+ 655              		.loc 1 283 5 view .LVU156
+ 283:Src/stm32g4xx_hal_msp.c ****     /**HRTIM1 GPIO Configuration
+ 656              		.loc 1 283 5 view .LVU157
+ 657 0032 DA6C     		ldr	r2, [r3, #76]
+ 658 0034 42F00102 		orr	r2, r2, #1
+ 659 0038 DA64     		str	r2, [r3, #76]
+ 283:Src/stm32g4xx_hal_msp.c ****     /**HRTIM1 GPIO Configuration
+ 660              		.loc 1 283 5 view .LVU158
+ 661 003a DB6C     		ldr	r3, [r3, #76]
+ 662 003c 03F00103 		and	r3, r3, #1
+ 663 0040 0293     		str	r3, [sp, #8]
+ 283:Src/stm32g4xx_hal_msp.c ****     /**HRTIM1 GPIO Configuration
+ 664              		.loc 1 283 5 view .LVU159
+ 665 0042 029B     		ldr	r3, [sp, #8]
+ 666              	.LBE16:
+ 283:Src/stm32g4xx_hal_msp.c ****     /**HRTIM1 GPIO Configuration
+ 667              		.loc 1 283 5 view .LVU160
+ 293:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 668              		.loc 1 293 5 view .LVU161
+ 293:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 669              		.loc 1 293 25 is_stmt 0 view .LVU162
+ 670 0044 4FF47043 		mov	r3, #61440
+ 671 0048 0393     		str	r3, [sp, #12]
+ 294:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 672              		.loc 1 294 5 is_stmt 1 view .LVU163
+ 294:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 673              		.loc 1 294 26 is_stmt 0 view .LVU164
+ 674 004a 0227     		movs	r7, #2
+ 675 004c 0497     		str	r7, [sp, #16]
+ 295:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 676              		.loc 1 295 5 is_stmt 1 view .LVU165
+ 295:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 677              		.loc 1 295 26 is_stmt 0 view .LVU166
+ 678 004e 0026     		movs	r6, #0
+ 679 0050 0596     		str	r6, [sp, #20]
+ 296:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF13_HRTIM1;
+ 680              		.loc 1 296 5 is_stmt 1 view .LVU167
+ 296:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF13_HRTIM1;
+ARM GAS  /tmp/cc8HNt2i.s 			page 33
+
+
+ 681              		.loc 1 296 27 is_stmt 0 view .LVU168
+ 682 0052 0325     		movs	r5, #3
+ 683 0054 0695     		str	r5, [sp, #24]
+ 297:Src/stm32g4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 684              		.loc 1 297 5 is_stmt 1 view .LVU169
+ 297:Src/stm32g4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 685              		.loc 1 297 31 is_stmt 0 view .LVU170
+ 686 0056 0D24     		movs	r4, #13
+ 687 0058 0794     		str	r4, [sp, #28]
+ 298:Src/stm32g4xx_hal_msp.c **** 
+ 688              		.loc 1 298 5 is_stmt 1 view .LVU171
+ 689 005a 03A9     		add	r1, sp, #12
+ 690 005c 0848     		ldr	r0, .L46+4
+ 691              	.LVL31:
+ 298:Src/stm32g4xx_hal_msp.c **** 
+ 692              		.loc 1 298 5 is_stmt 0 view .LVU172
+ 693 005e FFF7FEFF 		bl	HAL_GPIO_Init
+ 694              	.LVL32:
+ 300:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 695              		.loc 1 300 5 is_stmt 1 view .LVU173
+ 300:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 696              		.loc 1 300 25 is_stmt 0 view .LVU174
+ 697 0062 4FF4E063 		mov	r3, #1792
+ 698 0066 0393     		str	r3, [sp, #12]
+ 301:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 699              		.loc 1 301 5 is_stmt 1 view .LVU175
+ 301:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 700              		.loc 1 301 26 is_stmt 0 view .LVU176
+ 701 0068 0497     		str	r7, [sp, #16]
+ 302:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 702              		.loc 1 302 5 is_stmt 1 view .LVU177
+ 302:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 703              		.loc 1 302 26 is_stmt 0 view .LVU178
+ 704 006a 0596     		str	r6, [sp, #20]
+ 303:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF13_HRTIM1;
+ 705              		.loc 1 303 5 is_stmt 1 view .LVU179
+ 303:Src/stm32g4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF13_HRTIM1;
+ 706              		.loc 1 303 27 is_stmt 0 view .LVU180
+ 707 006c 0695     		str	r5, [sp, #24]
+ 304:Src/stm32g4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 708              		.loc 1 304 5 is_stmt 1 view .LVU181
+ 304:Src/stm32g4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 709              		.loc 1 304 31 is_stmt 0 view .LVU182
+ 710 006e 0794     		str	r4, [sp, #28]
+ 305:Src/stm32g4xx_hal_msp.c **** 
+ 711              		.loc 1 305 5 is_stmt 1 view .LVU183
+ 712 0070 03A9     		add	r1, sp, #12
+ 713 0072 4FF09040 		mov	r0, #1207959552
+ 714 0076 FFF7FEFF 		bl	HAL_GPIO_Init
+ 715              	.LVL33:
+ 716              		.loc 1 312 1 is_stmt 0 view .LVU184
+ 717 007a CDE7     		b	.L42
+ 718              	.L47:
+ 719              		.align	2
+ 720              	.L46:
+ 721 007c 00680140 		.word	1073833984
+ 722 0080 00040048 		.word	1207960576
+ARM GAS  /tmp/cc8HNt2i.s 			page 34
+
+
+ 723              		.cfi_endproc
+ 724              	.LFE252:
+ 726              		.section	.text.HAL_HRTIM_MspDeInit,"ax",%progbits
+ 727              		.align	1
+ 728              		.global	HAL_HRTIM_MspDeInit
+ 729              		.syntax unified
+ 730              		.thumb
+ 731              		.thumb_func
+ 732              		.fpu fpv4-sp-d16
+ 734              	HAL_HRTIM_MspDeInit:
+ 735              	.LVL34:
+ 736              	.LFB253:
+ 313:Src/stm32g4xx_hal_msp.c **** /**
+ 314:Src/stm32g4xx_hal_msp.c **** * @brief HRTIM MSP De-Initialization
+ 315:Src/stm32g4xx_hal_msp.c **** * This function freeze the hardware resources used in this example
+ 316:Src/stm32g4xx_hal_msp.c **** * @param hhrtim: HRTIM handle pointer
+ 317:Src/stm32g4xx_hal_msp.c **** * @retval None
+ 318:Src/stm32g4xx_hal_msp.c **** */
+ 319:Src/stm32g4xx_hal_msp.c **** void HAL_HRTIM_MspDeInit(HRTIM_HandleTypeDef* hhrtim)
+ 320:Src/stm32g4xx_hal_msp.c **** {
+ 737              		.loc 1 320 1 is_stmt 1 view -0
+ 738              		.cfi_startproc
+ 739              		@ args = 0, pretend = 0, frame = 0
+ 740              		@ frame_needed = 0, uses_anonymous_args = 0
+ 741              		.loc 1 320 1 is_stmt 0 view .LVU186
+ 742 0000 08B5     		push	{r3, lr}
+ 743              	.LCFI20:
+ 744              		.cfi_def_cfa_offset 8
+ 745              		.cfi_offset 3, -8
+ 746              		.cfi_offset 14, -4
+ 321:Src/stm32g4xx_hal_msp.c ****   if(hhrtim->Instance==HRTIM1)
+ 747              		.loc 1 321 3 is_stmt 1 view .LVU187
+ 748              		.loc 1 321 12 is_stmt 0 view .LVU188
+ 749 0002 0268     		ldr	r2, [r0]
+ 750              		.loc 1 321 5 view .LVU189
+ 751 0004 064B     		ldr	r3, .L52
+ 752 0006 9A42     		cmp	r2, r3
+ 753 0008 00D0     		beq	.L51
+ 754              	.LVL35:
+ 755              	.L48:
+ 322:Src/stm32g4xx_hal_msp.c ****   {
+ 323:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN HRTIM1_MspDeInit 0 */
+ 324:Src/stm32g4xx_hal_msp.c **** 
+ 325:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END HRTIM1_MspDeInit 0 */
+ 326:Src/stm32g4xx_hal_msp.c ****     /* Peripheral clock disable */
+ 327:Src/stm32g4xx_hal_msp.c ****     __HAL_RCC_HRTIM1_CLK_DISABLE();
+ 328:Src/stm32g4xx_hal_msp.c **** 
+ 329:Src/stm32g4xx_hal_msp.c ****     /* HRTIM1 DMA DeInit */
+ 330:Src/stm32g4xx_hal_msp.c ****     HAL_DMA_DeInit(hhrtim->hdmaTimerA);
+ 331:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN HRTIM1_MspDeInit 1 */
+ 332:Src/stm32g4xx_hal_msp.c **** 
+ 333:Src/stm32g4xx_hal_msp.c ****   /* USER CODE END HRTIM1_MspDeInit 1 */
+ 334:Src/stm32g4xx_hal_msp.c ****   }
+ 335:Src/stm32g4xx_hal_msp.c **** 
+ 336:Src/stm32g4xx_hal_msp.c **** }
+ 756              		.loc 1 336 1 view .LVU190
+ 757 000a 08BD     		pop	{r3, pc}
+ARM GAS  /tmp/cc8HNt2i.s 			page 35
+
+
+ 758              	.LVL36:
+ 759              	.L51:
+ 327:Src/stm32g4xx_hal_msp.c **** 
+ 760              		.loc 1 327 5 is_stmt 1 view .LVU191
+ 761 000c 054A     		ldr	r2, .L52+4
+ 762 000e 136E     		ldr	r3, [r2, #96]
+ 763 0010 23F08063 		bic	r3, r3, #67108864
+ 764 0014 1366     		str	r3, [r2, #96]
+ 330:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN HRTIM1_MspDeInit 1 */
+ 765              		.loc 1 330 5 view .LVU192
+ 766 0016 D0F8E400 		ldr	r0, [r0, #228]
+ 767              	.LVL37:
+ 330:Src/stm32g4xx_hal_msp.c ****   /* USER CODE BEGIN HRTIM1_MspDeInit 1 */
+ 768              		.loc 1 330 5 is_stmt 0 view .LVU193
+ 769 001a FFF7FEFF 		bl	HAL_DMA_DeInit
+ 770              	.LVL38:
+ 771              		.loc 1 336 1 view .LVU194
+ 772 001e F4E7     		b	.L48
+ 773              	.L53:
+ 774              		.align	2
+ 775              	.L52:
+ 776 0020 00680140 		.word	1073833984
+ 777 0024 00100240 		.word	1073876992
+ 778              		.cfi_endproc
+ 779              	.LFE253:
+ 781              		.text
+ 782              	.Letext0:
+ 783              		.file 3 "/usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h"
+ 784              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+ 785              		.file 5 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
+ 786              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
+ 787              		.file 7 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
+ 788              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h"
+ 789              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
+ 790              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_comp.h"
+ 791              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dac.h"
+ 792              		.file 12 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h"
+ 793              		.file 13 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_hrtim.h"
+ 794              		.file 14 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h"
+ 795              		.file 15 "/usr/lib/gcc/arm-none-eabi/9.2.1/include/stddef.h"
+ 796              		.file 16 "/usr/include/newlib/sys/_types.h"
+ 797              		.file 17 "/usr/include/newlib/sys/reent.h"
+ 798              		.file 18 "/usr/include/newlib/sys/lock.h"
+ 799              		.file 19 "/usr/include/newlib/stdlib.h"
+ 800              		.file 20 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
+ 801              		.file 21 "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"
+ 802              		.file 22 "USB_Device/App/usbd_cdc_if.h"
+ 803              		.file 23 "Inc/main.h"
+ 804              		.file 24 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h"
+ARM GAS  /tmp/cc8HNt2i.s 			page 36
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32g4xx_hal_msp.c
+     /tmp/cc8HNt2i.s:18     .text.HAL_MspInit:0000000000000000 $t
+     /tmp/cc8HNt2i.s:26     .text.HAL_MspInit:0000000000000000 HAL_MspInit
+     /tmp/cc8HNt2i.s:90     .text.HAL_MspInit:0000000000000038 $d
+     /tmp/cc8HNt2i.s:96     .text.HAL_COMP_MspInit:0000000000000000 $t
+     /tmp/cc8HNt2i.s:103    .text.HAL_COMP_MspInit:0000000000000000 HAL_COMP_MspInit
+     /tmp/cc8HNt2i.s:199    .text.HAL_COMP_MspDeInit:0000000000000000 $t
+     /tmp/cc8HNt2i.s:206    .text.HAL_COMP_MspDeInit:0000000000000000 HAL_COMP_MspDeInit
+     /tmp/cc8HNt2i.s:248    .text.HAL_COMP_MspDeInit:0000000000000020 $d
+     /tmp/cc8HNt2i.s:253    .text.HAL_DAC_MspInit:0000000000000000 $t
+     /tmp/cc8HNt2i.s:260    .text.HAL_DAC_MspInit:0000000000000000 HAL_DAC_MspInit
+     /tmp/cc8HNt2i.s:381    .text.HAL_DAC_MspInit:0000000000000078 $d
+     /tmp/cc8HNt2i.s:388    .text.HAL_DAC_MspDeInit:0000000000000000 $t
+     /tmp/cc8HNt2i.s:395    .text.HAL_DAC_MspDeInit:0000000000000000 HAL_DAC_MspDeInit
+     /tmp/cc8HNt2i.s:452    .text.HAL_DAC_MspDeInit:0000000000000040 $d
+     /tmp/cc8HNt2i.s:458    .text.HAL_HRTIM_MspInit:0000000000000000 $t
+     /tmp/cc8HNt2i.s:465    .text.HAL_HRTIM_MspInit:0000000000000000 HAL_HRTIM_MspInit
+     /tmp/cc8HNt2i.s:576    .text.HAL_HRTIM_MspInit:0000000000000068 $d
+     /tmp/cc8HNt2i.s:583    .text.HAL_HRTIM_MspPostInit:0000000000000000 $t
+     /tmp/cc8HNt2i.s:590    .text.HAL_HRTIM_MspPostInit:0000000000000000 HAL_HRTIM_MspPostInit
+     /tmp/cc8HNt2i.s:721    .text.HAL_HRTIM_MspPostInit:000000000000007c $d
+     /tmp/cc8HNt2i.s:727    .text.HAL_HRTIM_MspDeInit:0000000000000000 $t
+     /tmp/cc8HNt2i.s:734    .text.HAL_HRTIM_MspDeInit:0000000000000000 HAL_HRTIM_MspDeInit
+     /tmp/cc8HNt2i.s:776    .text.HAL_HRTIM_MspDeInit:0000000000000020 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_Init
+HAL_NVIC_SetPriority
+HAL_NVIC_EnableIRQ
+HAL_GPIO_DeInit
+HAL_NVIC_DisableIRQ
+HAL_DMA_Init
+Error_Handler
+hdma_hrtim1_a
+HAL_DMA_DeInit
